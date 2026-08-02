@@ -12,7 +12,7 @@ Hannah Ilievsky's product design portfolio. Static HTML/CSS site, no build step.
 ## Running locally
 
 ```
-python3 -m http.server 8000
+npx serve
 ```
 
-Then open `http://localhost:8000`.
+Then open the URL it prints (defaults to `http://localhost:3000`).
