@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&family=Unbounded:wght@700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js" defer></script>
 </head>
 <body>
 
@@ -19,7 +20,9 @@
     <a href="#" class="is-current">Use Cases</a>
     <a href="../index.html#about">About Me</a>
   </div>
-  <a href="../index.html#contact">Contact</a>
+  <div class="nav-actions">
+    <a href="../index.html#contact">Contact</a>
+  </div>
 </nav>
 
 <section class="case-preview" data-screen-label="Screen preview header">
@@ -47,7 +50,7 @@
 </section>
 
 <section class="case-study" data-screen-label="Case study">
-  <div class="case-card">
+  <div class="case-card reveal">
     <div class="case-card-header">
       <div class="label">Fact Commando</div>
       <h2>Responsiveness and new features</h2>
@@ -96,11 +99,11 @@
 
 <section id="about" class="about" data-screen-label="About">
   <div class="about-inner">
-    <div class="label">About</div>
-    <h2>More about me</h2>
-    <p>I'm a product designer who enjoys taking ambiguous problems and shaping them into clear, usable interfaces. I care about the details that make a product feel considered — from interaction states to the words on a button.</p>
-    <p>Outside of client and product work, I spend time exploring design systems and how small teams can move fast without losing craft.</p>
-    <div class="tag-list">
+    <div class="label reveal">About</div>
+    <h2 class="reveal" style="--reveal-delay:0.08s">More about me</h2>
+    <p class="reveal" style="--reveal-delay:0.16s">I'm a product designer who enjoys taking ambiguous problems and shaping them into clear, usable interfaces. I care about the details that make a product feel considered — from interaction states to the words on a button.</p>
+    <p class="reveal" style="--reveal-delay:0.22s">Outside of client and product work, I spend time exploring design systems and how small teams can move fast without losing craft.</p>
+    <div class="tag-list reveal" style="--reveal-delay:0.3s">
       <span class="tag">Product Design</span>
       <span class="tag">UX Research</span>
       <span class="tag">Prototyping</span>
@@ -109,11 +112,11 @@
 </section>
 
 <section id="contact" class="contact" data-screen-label="Contact">
-  <div class="label">Contact</div>
-  <h2>Let's talk</h2>
-  <p>Open to new opportunities and collaborations — reach out any time.</p>
-  <a class="contact-email" href="mailto:hannahilievsky@gmail.com">hannahilievsky@gmail.com</a>
-  <div class="contact-links">
+  <div class="label reveal">Contact</div>
+  <h2 class="reveal" style="--reveal-delay:0.08s">Let's talk</h2>
+  <p class="reveal" style="--reveal-delay:0.16s">Open to new opportunities and collaborations — reach out any time.</p>
+  <a class="contact-email reveal" style="--reveal-delay:0.24s" href="mailto:hannahilievsky@gmail.com">hannahilievsky@gmail.com</a>
+  <div class="contact-links reveal" style="--reveal-delay:0.3s">
     <a href="#">LinkedIn</a>
   </div>
 </section>
