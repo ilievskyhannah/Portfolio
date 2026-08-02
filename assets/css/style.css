@@ -903,14 +903,19 @@ html {
   animation-delay: 0.35s;
 }
 
-/* ---------- Motion: scroll reveal ---------- */
+/* ---------- Motion: scroll reveal ----------
+   Hidden only once `js` confirms the reveal script is running, so content
+   stays visible by default if JavaScript fails to load. */
 
 .reveal {
-  opacity: 0;
-  transform: translateY(28px);
   transition: opacity 0.7s cubic-bezier(0.16, 0.84, 0.44, 1),
     transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1);
   transition-delay: var(--reveal-delay, 0s);
+}
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(28px);
 }
 
 .reveal.is-visible {
