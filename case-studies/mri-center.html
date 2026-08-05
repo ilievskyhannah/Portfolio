@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MRI Center — Case Study · Hannah Ilievsky</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@300;400;600;700&family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEEFE8;
+  --paper-2:#E6E8DE;
+  --ink:#171C18;
+  --ink-2:#4B534D;
+  --ink-3:#7E877F;
+  --rule:#C8CDC2;
+  --mark:#D6E75C;
+
+  --display:"Frank Ruhl Libre", "Times New Roman", serif;
+  --body:"Assistant", "Segoe UI", Arial, sans-serif;
+  --doc:"David Libre", "Frank Ruhl Libre", serif;
+
+  --pad:clamp(1.5rem, 5vw, 6rem);
+  --col:66ch;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:clamp(1rem,.95rem + .2vw,1.09rem);
+  line-height:1.65;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+
+/* back to portfolio */
+.back{position:fixed;top:clamp(1.2rem,3vh,1.8rem);inset-inline-end:clamp(1.2rem,3vw,2rem);z-index:60;font-family:var(--doc);font-size:.78rem;letter-spacing:.08em;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .3s ease,border-color .3s ease}
+.back:hover{color:var(--ink);border-color:var(--ink)}
+
+/* rail */
+.rail{position:fixed;inset-inline-start:clamp(.6rem,1.6vw,1.5rem);top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:.55rem}
+.rail a{display:block;width:2px;height:16px;background:var(--rule);transition:background .3s ease,height .3s ease}
+.rail a:hover{background:var(--ink-3)}
+.rail a.on{background:var(--ink);height:26px}
+.rail a:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+@media (max-width:760px){.rail{display:none}}
+
+/* section shell */
+.section{position:relative;min-height:100svh;padding:clamp(4rem,10vh,7rem) var(--pad) clamp(3.5rem,8vh,6rem);display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--rule)}
+.section:last-of-type{border-bottom:0}
+.wrap{width:100%;max-width:1180px;margin-inline:auto}
+
+.num{position:absolute;top:clamp(1.6rem,4vh,3rem);inset-inline-start:var(--pad);font-family:var(--doc);font-size:.78rem;letter-spacing:.22em;color:var(--ink-3)}
+@media (max-width:760px){.num{inset-inline-start:auto;inset-inline-end:var(--pad)}}
+
+.eyebrow{font-family:var(--doc);font-size:.76rem;letter-spacing:.2em;color:var(--ink-3);margin:0 0 1.4rem;display:flex;align-items:center;gap:.75rem}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule);max-width:180px}
+
+h1{font-family:var(--display);font-weight:900;font-size:clamp(2.8rem,9vw,6.6rem);line-height:.94;letter-spacing:-.01em;margin:0 0 1.2rem}
+h2{font-family:var(--display);font-weight:900;font-size:clamp(1.9rem,4.6vw,3.35rem);line-height:1.08;letter-spacing:-.005em;margin:0 0 1.6rem;max-width:20ch}
+h3{font-family:var(--body);font-weight:700;font-size:1rem;letter-spacing:.02em;margin:0 0 .6rem}
+p{margin:0 0 1.05rem;max-width:var(--col)}
+.lead{font-family:var(--display);font-weight:500;font-size:clamp(1.2rem,2.4vw,1.65rem);line-height:1.45;max-width:44ch}
+.soft{color:var(--ink-2)}
+.tiny{font-size:.85rem;color:var(--ink-2);max-width:60ch}
+
+.rule{height:1px;background:var(--rule);border:0;margin:2.2rem 0;max-width:var(--col)}
+
+/* highlighter */
+.mark{background-image:linear-gradient(var(--mark),var(--mark));background-repeat:no-repeat;background-position:100% 86%;background-size:0% .58em;padding-inline:.08em;transition:background-size .85s cubic-bezier(.2,.7,.3,1)}
+.is-in .mark{background-size:100% .58em}
+.is-in .mark:nth-of-type(2){transition-delay:.25s}
+
+/* lists */
+.list{list-style:none;padding:0;margin:0;max-width:var(--col)}
+.list li{padding:.85rem 0;border-top:1px solid var(--rule)}
+.list li:last-child{border-bottom:1px solid var(--rule)}
+.list b{font-weight:700}
+
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.tags li{font-family:var(--doc);font-size:.88rem;border:1px solid var(--rule);padding:.4rem .8rem;color:var(--ink-2)}
+
+/* grid */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(1.6rem,4vw,3.5rem);align-items:start}
+.cols--wide{grid-template-columns:1.25fr .85fr}
+@media (max-width:900px){.cols--wide{grid-template-columns:1fr}}
+
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:.97rem}
+.tbl th{text-align:start;font-family:var(--doc);font-weight:500;font-size:.75rem;letter-spacing:.16em;color:var(--ink-3);padding:0 0 .8rem;border-bottom:1px solid var(--ink)}
+.tbl td{padding:.95rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.tbl td:first-child{padding-inline-end:2rem;width:44%;color:var(--ink-2)}
+.tbl td:last-child{font-weight:600}
+
+/* stat row (After Effects numbers) */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0;padding:0;list-style:none}
+.stats li{background:var(--paper);padding:1.4rem 1rem;text-align:center}
+.stats .n{font-family:var(--display);font-weight:900;font-size:clamp(1.6rem,4vw,2.4rem);line-height:1;color:var(--ink)}
+.stats .l{font-family:var(--doc);font-size:.8rem;letter-spacing:.12em;color:var(--ink-3);margin-top:.5rem}
+@media (max-width:560px){.stats{grid-template-columns:1fr}}
+
+/* before/after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media (max-width:720px){.ba{grid-template-columns:1fr}}
+.ba figure{margin:0}
+.ba figcaption{font-family:var(--doc);font-size:.8rem;letter-spacing:.14em;color:var(--ink-3);margin-bottom:.6rem}
+
+/* placeholder */
+.ph{border:1px dashed var(--ink-3);background:repeating-linear-gradient(135deg,transparent,transparent 9px,rgba(126,135,127,.07) 9px,rgba(126,135,127,.07) 18px);padding:clamp(1.2rem,3vw,1.8rem);display:flex;flex-direction:column;gap:.45rem;min-height:190px;justify-content:center}
+.ph-l{font-family:var(--doc);font-size:.72rem;letter-spacing:.18em;color:var(--ink-3)}
+.ph-t{font-weight:700;font-size:1rem}
+.ph-h{font-size:.88rem;color:var(--ink-2);max-width:38ch}
+
+/* callout */
+.callout{border-inline-start:3px solid var(--ink);padding:.2rem 1.2rem;max-width:52ch}
+.callout p{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(1.1rem,2.1vw,1.4rem);line-height:1.5}
+
+/* kicker */
+.kicker{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--ink);max-width:var(--col);font-size:1rem}
+
+/* title meta */
+.title-meta{display:flex;flex-wrap:wrap;gap:.5rem 2rem;font-family:var(--doc);font-size:.9rem;color:var(--ink-2);margin-top:2.6rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
+.solo{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--body);font-weight:700;color:var(--ink)}
+.live{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--body);font-weight:700;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--mark)}
+.live:hover{border-bottom-color:var(--ink)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.3,1)}
+.is-in.reveal,.is-in .reveal{opacity:1;transform:none}
+.section .reveal:nth-child(2){transition-delay:.08s}
+.section .reveal:nth-child(3){transition-delay:.16s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .mark{background-size:100% .58em;transition:none}
+}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+@media print{
+  .rail{display:none}
+  .back{display:none}
+  body{background:#fff}
+  .section{min-height:auto;page-break-after:always;border-bottom:0;padding:2rem 0}
+  .reveal{opacity:1;transform:none}
+  .mark{background-size:100% .58em}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<a class="back" href="../index.html">← תיק עבודות</a>
+
+<nav class="rail" aria-label="ניווט בין פרקים">
+  <a href="#s1" class="on" aria-label="פרק 1"></a>
+  <a href="#s2" aria-label="פרק 2"></a>
+  <a href="#s3" aria-label="פרק 3"></a>
+  <a href="#s4" aria-label="פרק 4"></a>
+  <a href="#s5" aria-label="פרק 5"></a>
+  <a href="#s6" aria-label="פרק 6"></a>
+  <a href="#s7" aria-label="פרק 7"></a>
+  <a href="#s8" aria-label="פרק 8"></a>
+  <a href="#s9" aria-label="פרק 9"></a>
+  <a href="#s10" aria-label="פרק 10"></a>
+</nav>
+
+<!-- 01 -->
+<section class="section" id="s1">
+  <span class="num">01 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">CASE STUDY · הנה איליבסקי</p>
+    <h1 class="reveal">MRI Center</h1>
+    <!-- מרכז שטראוס לנוירו-הדמיה — חקר תפקוד המוח, קליני ופרה-קליני -->
+    <p class="lead reveal" style="max-width:52ch">אתר חדש למרכז שטראוס לנוירו־הדמיה, אוניברסיטת תל אביב.</p>
+    <hr class="rule reveal">
+    <div class="callout reveal">
+      <p>אתר משנת 2013 שאיש לא נשאר בו יותר משנייה.<br>
+      יזמתי את החלפתו, ובניתי אותו <span class="mark">לבד — מהאפיון ועד ה־CSS</span>.</p>
+    </div>
+    <div class="title-meta reveal">
+      <span>2025</span>
+      <span class="solo">אפיון · עיצוב · קוד · הפקת מדיה — סולו מלא</span>
+      <a class="live" href="https://mri.tau.ac.il/" target="_blank" rel="noopener">האתר חי →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="section" id="s2">
+  <span class="num">02 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">ההקשר והיוזמה</p>
+    <h2 class="reveal">מ־2013 לימינו.</h2>
+    <div class="reveal" style="margin-bottom:2rem">
+      <div class="ba">
+        <figure>
+          <figcaption>לפני · 2013</figcaption>
+          <div class="ph" style="min-height:230px">
+            <span class="ph-l">PLACEHOLDER</span>
+            <span class="ph-t">צילום האתר הישן</span>
+            <span class="ph-h">תבנית TAU אפורה, סרגל צד, טור טקסט צפוף, תמונה אחת לעמוד. יש לך את הצילומים.</span>
+          </div>
+        </figure>
+        <figure>
+          <figcaption>אחרי · 2025</figcaption>
+          <div class="ph" style="min-height:230px">
+            <span class="ph-l">PLACEHOLDER</span>
+            <span class="ph-t">צילום האתר החדש</span>
+            <span class="ph-h">Hero כהה, כרטיסים דיאגונליים, נתונים מונפשים, לוגואי שותפים. צילום מה־live.</span>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <div class="cols cols--wide reveal">
+      <div>
+        <ul class="list">
+          <li><b>האתר הקודם:</b> משנת 2013, בתבנית ישנה של האוניברסיטה. טקסטואלי, תמונה אחת לעמוד, חומר לא רלוונטי. המשתמש נוטש תוך שנייה.</li>
+          <li><b>היוזמה שלי:</b> להציע ולבנות אתר עדכני שמעורר עניין בעולם חקר המוח.</li>
+          <li><b>האילוץ:</b> האוניברסיטה מספקת Wix Studio בלבד. עיצבתי ב־Figma מאפס והעליתי לפלטפורמה — זו לא מילוי תבנית.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>מה היה שלי</h3>
+        <ul class="tags">
+          <li>אפיון</li><li>עיצוב <span style="color:var(--ink-3)">· Figma</span></li><li>בנייה <span style="color:var(--ink-3)">· Wix Studio</span></li><li>JavaScript</li><li>CSS · Design System</li><li>הפקת מדיה <span style="color:var(--ink-3)">· AI</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="section" id="s3">
+  <span class="num">03 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">הבעיה שבחרתי לפתור</p>
+    <h2 class="reveal">גם באתר תדמית יש מוצר.</h2>
+    <div class="cols reveal">
+      <div>
+        <p>אתר תדמית הוא לרוב חלון ראווה. אבל בתוכו הייתה בעיה תפעולית אמיתית:</p>
+        <p><b>מנהל המכון הפך לצוואר בקבוק אנושי.</b> כל מי שרצה להזמין סריקה במערכת ה־ERP (Book-It-Lab) פנה אליו, והוא הסביר שלב־שלב, שוב ושוב.</p>
+      </div>
+      <div>
+        <ul class="list">
+          <li><b>12</b> אנשים לפחות פנו אליו באופן קבוע</li>
+          <li>אותה שאלה עצמה, שוב ושוב</li>
+          <li>הידע היה תקוע בראש של אדם אחד</li>
+        </ul>
+      </div>
+    </div>
+    <div class="kicker reveal">
+      <div class="callout">
+        <p>זה לא היה חוסר בדף. זה היה <span class="mark">ידע שהיה תקוע בראש של אדם אחד</span>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="section" id="s4">
+  <span class="num">04 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">ההחלטה</p>
+    <h2 class="reveal">להוציא את הידע מהראש.</h2>
+    <div class="cols cols--wide reveal">
+      <div>
+        <p>במקום להוסיף עוד עמוד הסבר, בניתי <b>אונבורדינג של 6 שלבים</b> — מדריך פופ־אפ צעד־אחר־צעד. המשתמש לוחץ ״הבא״ ומתקדם בתהליך ההזמנה עד הסוף.</p>
+        <p>כל מי שפנה למנכ״ל — נשלח לשם.</p>
+        <p><b>התוצאה, מפי המנכ״ל:</b> אחרי האונבורדינג, הפניות פסקו. מ־12 קבועים לאפס.</p>
+        <div class="callout" style="margin-top:1.6rem">
+          <p>המערכת לא ענתה במקום המנכ״ל. <span class="mark">היא לימדה את המשתמש לעשות זאת לבד.</span></p>
+        </div>
+      </div>
+      <div>
+        <div class="ph">
+          <span class="ph-l">PLACEHOLDER · הסלייד המרכזי</span>
+          <span class="ph-t">רצף מסכי האונבורדינג</span>
+          <span class="ph-h">2–3 מסכים מתוך 6 השלבים, ברצף. כאן המסכים כן התוכן — הם מראים את הפתרון בפעולה.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="section" id="s5">
+  <span class="num">05 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">הפקת המדיה</p>
+    <h2 class="reveal">אי אפשר להכניס מצלמה לתוך מגנט.</h2>
+    <div class="cols reveal">
+      <div>
+        <p>חדר MRI הוא סביבה מגנטית. רוב מה שצריך להראות — מכשירים, סריקות, חלל — לא ניתן לצילום ישיר.</p>
+        <p><b>הפתרון: הפקת מדיה מבוססת־מקורות.</b> אספתי חומר גלם ממקורות מרובים — נכסים מהאתר הישן, סריקות מוח, מעקב עיניים, צילומי האוניברסיטה — והזנתי אותם למודלים כדי לייצר תמונות וסרטונים חדשים.</p>
+        <p><b>לא פלט גולמי:</b> ערכתי כל תוצר, ליפיתי את חללי המכשירים, והתאמתי הכול לשפה הוויזואלית של האתר.</p>
+      </div>
+      <div>
+        <div class="ph">
+          <span class="ph-l">PLACEHOLDER</span>
+          <span class="ph-t">דימויי ה־AI</span>
+          <span class="ph-h">ה־hero (פנים בסורק), כרטיסי המחקר. אם אפשר — תוצר לצד חומר הגלם שלו, כדי להראות את התהליך.</span>
+        </div>
+      </div>
+    </div>
+    <p class="eyebrow reveal" style="margin:2.6rem 0 1rem">ונתוני המכון, מונפשים ב־AFTER EFFECTS</p>
+    <ul class="stats reveal">
+      <li><div class="n">9,933+</div><div class="l">BRAIN BANK</div></li>
+      <li><div class="n">4,470+</div><div class="l">SCANS</div></li>
+      <li><div class="n">60+</div><div class="l">SEARCHES</div></li>
+    </ul>
+    <div class="kicker reveal">
+      <p>אילוץ פיזי הפך ל־pipeline של הפקה: <span class="mark">איסוף מקורות ← יצירה ← עריכה</span>. לא ״תמונת AI״ — תהליך.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="section" id="s6">
+  <span class="num">06 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">הקוד וה־Design System</p>
+    <h2 class="reveal">לא רק עיצבתי — בניתי.</h2>
+    <div class="cols cols--wide reveal">
+      <div>
+        <ul class="list">
+          <li><b>Design System ב־CSS:</b> הגדרתי את הצבעים, גדלי הפונטים וגודל הכפתורים — מערכת עקבית לכל האתר.</li>
+          <li><b>כפתור מעוצב</b> שגדל הצידה ב־hover.</li>
+          <li><b>כרטיס צוות</b> שחושף ב־hover את התפקיד, האחריות ופרטי הקשר.</li>
+          <li><b>תפריט קורסים מקוצר</b> שמתרחב בלחיצה ומציג פרטים נוספים — CMS בשילוב קוד.</li>
+          <li><b>מערכת אנימציות גלילה ב־Wix Studio:</b> כל סקשן נכנס בתנועה כשגוללים אליו.</li>
+        </ul>
+        <p class="tiny" style="margin-top:1.2rem">Wix Studio נתן את המסגרת. הקוד נתן את ההתנהגות.</p>
+      </div>
+      <div>
+        <div class="ph">
+          <span class="ph-l">PLACEHOLDER</span>
+          <span class="ph-t">GIF של אינטראקציה</span>
+          <span class="ph-h">ה־hover על כרטיס צוות, או כניסת סקשן בגלילה. אינטראקציה עובדת הכי טוב בתנועה, לא בצילום סטטי.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="section" id="s7">
+  <span class="num">07 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">מי המשתמש</p>
+    <h2 class="reveal">חוקרים — ובאנגלית.</h2>
+    <div class="cols reveal">
+      <div>
+        <ul class="list">
+          <li><b>חוקרים קיימים</b> — צריכים להזמין זמן סורק בלי להיתקע בתהליך ה־ERP.</li>
+          <li><b>חוקרים עתידיים</b> — צריכים סיבה להתעניין במכון מלכתחילה.</li>
+        </ul>
+        <p style="margin-top:1.4rem">האונבורדינג משרת את הראשון, החוויה הוויזואלית את השני.</p>
+      </div>
+      <div>
+        <div class="callout">
+          <p>בניתי את האתר <span class="mark">באנגלית כברירת מחדל</span>.</p>
+        </div>
+        <p class="soft" style="margin-top:1.2rem">הקהל — חוקרים, חברות הייטק, ופונים מחו״ל — עובד באנגלית. עברית לא הייתה צורך אמיתי אלא הנחה מוסדית. זו הייתה החלטה שנגזרה מהמשתמש, לא מהתבנית.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="section" id="s8">
+  <span class="num">08 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">מה שהיה קשה</p>
+    <h2 class="reveal">סולו על פלטפורמה מוגבלת.</h2>
+    <div class="cols reveal">
+      <div>
+        <h3>Wix Studio מול Figma</h3>
+        <p class="soft">עיצבתי בלי מגבלות ב־Figma, ואז נאלצתי לתרגם לפלטפורמה שהאוניברסיטה כפתה. חלק מההתנהגות דרש קוד, כי ה־CMS לבדו לא הספיק.</p>
+      </div>
+      <div>
+        <h3>סולו מלא</h3>
+        <p class="soft">אין צוות להתייעץ איתו, אין מפתח לזרוק אליו את הקוד. אפיון, עיצוב, קוד, מדיה — הכול עליי. זה גם מה שהופך את זה לפרויקט שבו כל החלטה היא שלי.</p>
+      </div>
+    </div>
+    <div class="kicker reveal">
+      <p>בשני הקייסים האחרים הייתי בצוות. <b>כאן הייתי הכל.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="section" id="s9">
+  <span class="num">09 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">מה אני לוקחת מזה</p>
+    <h2 class="reveal">שלושה לקחים.</h2>
+    <ul class="list reveal">
+      <li><b>גם באתר תדמית יש מוצר.</b> מצאתי את הבעיה התפעולית — המנכ״ל כצוואר בקבוק — בתוך פרויקט שאמור היה להיות חלון ראווה. מאז אני מחפשת את נקודת הכאב האמיתית גם במקומות שנראים שטוחים.</li>
+      <li><b>אילוצים הם חומר.</b> Wix כפוי, חדר מגנטי בלי מצלמה — שניהם הפכו להחלטות עיצוב, לא לתירוצים.</li>
+      <li><b>החלטת מוצר היא לפעמים מה שבחרת לא לבנות.</b> ויתרתי על עברית כי המשתמש לא צריך אותה. לא כל מה שאפשר להוסיף — צריך.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="section" id="s10">
+  <span class="num">10 / 10</span>
+  <div class="wrap">
+    <p class="eyebrow reveal">איפה זה מתחבר</p>
+    <h2 class="reveal">האתר היה הדלת.</h2>
+    <div class="cols cols--wide reveal">
+      <div>
+        <p>מאחורי האתר יש <b>מערכת שלמה</b> שאני מאפיינת עכשיו — פלטפורמה שתאחד את המערכות המנותקות של המכון עבור שבעה סוגי משתמשים.</p>
+        <p>אותו מכון, אותה בעיה של ידע תקוע בראשים — הפעם בקנה מידה גדול.</p>
+      </div>
+      <div>
+        <h3>יצירת קשר</h3>
+        <p class="soft" style="line-height:2">
+          <a href="mailto:ilievskyhannah@gmail.com" style="color:var(--ink)">ilievskyhannah@gmail.com</a><br>
+          <a href="http://www.linkedin.com/in/hannahilievsky" style="color:var(--ink)">LinkedIn</a><br>
+          <a href="https://www.hannahilievsky.com" style="color:var(--ink)">hannahilievsky.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var secs = Array.prototype.slice.call(document.querySelectorAll('.section'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('.rail a'));
+  if(!('IntersectionObserver' in window)){ secs.forEach(function(s){ s.classList.add('is-in'); }); return; }
+  var revealObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('is-in'); });
+  }, {threshold:0.15, rootMargin:'0px 0px -8% 0px'});
+  secs.forEach(function(s){ revealObs.observe(s); });
+  var railObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(!e.isIntersecting) return; var i=secs.indexOf(e.target); links.forEach(function(l,j){ l.classList.toggle('on', j===i); }); });
+  }, {threshold:0.5});
+  secs.forEach(function(s){ railObs.observe(s); });
+})();
+</script>
+
+</body>
+</html>
