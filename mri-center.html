@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MRI Center — Case Study | Hannah Ilievsky</title>
+  <meta name="description" content="MRI Center case study by Hannah Ilievsky, UX/UI Designer & Product Designer. A 2013 university site rebuilt solo — research, design system, Wix Studio build, and AI-assisted media production for Tel Aviv University's brain imaging institute.">
+  
+  <!-- Fonts: Satoshi & Azeret Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+<body class="case-study-page">
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="navbar-wrapper scrolled">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <a href="index.html" class="nav-brand">
+          <div class="brand-avatar">
+            <div style="width:100%;height:100%;border-radius:50%;background:#1e293b;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-heading);font-size:14px;">HI</div>
+          </div>
+          <span class="brand-logo-text">Hannah Ilievsky</span>
+        </a>
+
+        <div class="nav-menu">
+          <a href="index.html#work" class="nav-link active">← Back to Work</a>
+          <a href="index.html#about" class="nav-link">About Me</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-icon theme-toggle-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+            <span id="theme-icon">🌙</span>
+          </button>
+          <a href="mailto:ilievskyhannah@gmail.com" class="social-btn" style="padding:8px 16px;">
+            <span>Email</span>
+          </a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: HERO (Full-Bleed Main Photo Header, Edge-to-Edge)
+       ========================================================================== -->
+  <section class="case-study-hero-fullbleed">
+    <img src="./mri-header-hero.png" alt="MRI Center Full-Bleed Hero Showcase">
+  </section>
+
+  <!-- ==========================================================================
+       SECTIONS 2-6: CASE STUDY CONTENT CONTAINER
+       ========================================================================== -->
+  <main class="section" style="padding-top: 40px;">
+    <div class="container" style="max-width: 960px;">
+      
+      <div style="margin-bottom: 24px;">
+        <a href="index.html#work" class="btn-secondary" style="font-size: 13px; padding: 6px 16px;">← Back to Selected Work</a>
+      </div>
+
+      <!-- Section 2: Title & Subtitle (Unboxed) -->
+      <div class="hero-badge" style="margin-bottom: 16px;">✦ Research Institute Website • Solo Project</div>
+      <h1 class="hero-title" style="font-family: var(--font-heading); font-size: clamp(32px, 5vw, 56px); font-weight: 700; color: var(--text-h1); margin-bottom: 12px; text-align: left;">
+        MRI Center
+      </h1>
+      <p class="hero-subtitle" style="font-family: var(--font-mono); font-weight: 100; color: var(--text-subtitle); text-align: left; margin: 0 0 32px 0; max-width: 100%;">
+        A 2013 university relic nobody stayed on for more than a second — reimagined solo, from research to shipped code, for Tel Aviv University's brain imaging institute.
+      </p>
+
+      <!-- Section 3: Metadata Box (Role & Timeline Only, Boxed) -->
+      <div class="case-study-meta-grid" style="margin-bottom: 40px;">
+        <div class="meta-item">
+          <span class="meta-label">ROLE</span>
+          <span class="meta-val">UX/UI Designer & Product Designer — Solo, End-to-End</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">TIMELINE</span>
+          <span class="meta-val">2025</span>
+        </div>
+      </div>
+
+      <!-- Quote Callout Banner -->
+      <div style="background: var(--bg-secondary); border-left: 4px solid var(--accent-primary); border-radius: var(--radius-md); padding: 24px 32px; margin-bottom: 40px;">
+        <p style="font-family: var(--font-heading); font-size: 20px; font-weight: 500; color: var(--text-primary); margin: 0; line-height: 1.5;">
+          It wasn't a missing page.<br>
+          <span style="color: var(--accent-primary); font-weight: 700;">It was knowledge stuck in one person's head.</span>
+        </p>
+      </div>
+
+      <!-- High-Res Image Showcase -->
+      <div class="modal-image-showcase" style="margin: 32px 0;">
+        <video src="./mri-showcase-erp.mp4" autoplay loop muted playsinline style="width: 100%; display: block; border-radius: 20px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg);"></video>
+      </div>
+
+      <!-- Article Detailed Content -->
+      <article style="margin-top: 48px; line-height: 1.8; color: var(--text-secondary);">
+
+        <section style="margin-bottom: 48px;">
+          <h2 style="font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+            02. From a 2013 Relic to a Live Research Platform
+          </h2>
+          <p>
+            The old site dated back to 2013: a generic university template, one image per page, text-heavy and largely irrelevant to visitors. People left within a second. I initiated the replacement myself and built it entirely solo — research, design, code, and media production.
+          </p>
+          <p>
+            The constraint: the university only provides Wix Studio. So I designed the system from scratch in Figma, then translated it onto the platform — this wasn't filling in a template, it was building one.
+          </p>
+          <ul style="padding-left: 20px; font-size: 15px; margin-bottom: 8px;">
+            <li style="margin-bottom: 8px;"><strong>Research & Spec:</strong> Defined the problem, the audience, and the information architecture from zero.</li>
+            <li style="margin-bottom: 8px;"><strong>Design:</strong> Full visual system built in Figma.</li>
+            <li style="margin-bottom: 8px;"><strong>Build:</strong> Implemented in Wix Studio, with custom JavaScript where the CMS wasn't enough.</li>
+            <li style="margin-bottom: 8px;"><strong>Media Production:</strong> AI-assisted photography and video for a space that couldn't be shot directly.</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom: 48px;">
+          <h2 style="font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+            03. The Real Problem: A Director as Human Bottleneck
+          </h2>
+          <p>
+            Even a brochure site had a real operational problem hiding inside it. The institute director had become a human bottleneck: at least <strong>12 people regularly contacted him directly</strong> just to book scanner time through the ERP system (Book-It-Lab), and he explained the same steps over and over, every time.
+          </p>
+        </section>
+
+        <section style="margin-bottom: 48px;">
+          <h2 style="font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+            04. Turning a Bottleneck into a 6-Step Onboarding
+          </h2>
+          <p>
+            Instead of adding another explanatory page, I designed a <strong>6-step popup onboarding</strong> — a guided walkthrough the user clicks through to complete the entire booking process. Everyone who used to email the director gets routed there instead.
+          </p>
+          <div style="background: var(--bg-secondary); border-left: 3px solid var(--accent-emerald); padding: 16px 24px; margin: 20px 0; border-radius: var(--radius-sm);">
+            <p style="margin: 0; font-weight: 600; color: var(--text-primary);">
+              Result, from the director himself: recurring inquiries dropped from <strong>12 regulars to zero</strong>.
+            </p>
+          </div>
+          <p>
+            The system didn't answer instead of the director — it taught users to do it themselves.
+          </p>
+        </section>
+
+        <section style="margin-bottom: 48px;">
+          <h2 style="font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+            05. Producing Media for a Room You Can't Photograph
+          </h2>
+          <p>
+            An MRI suite is a magnetic environment — most of what needed showing (the scanner, the scans, the space itself) couldn't be shot directly. The solution was source-based media production: I gathered raw material from multiple sources — old site assets, brain scans, eye-tracking footage, university photography — and fed it into AI models to generate new imagery and video.
+          </p>
+          <p>
+            Nothing shipped as raw output. I edited every asset, cleaned up the equipment spaces, and matched everything to the site's visual language.
+          </p>
+          <div class="case-study-meta-grid" style="margin: 24px 0;">
+            <div class="meta-item">
+              <span class="meta-label">BRAIN BANK</span>
+              <span class="meta-val">9,933+</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">SCANS</span>
+              <span class="meta-val">4,470+</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">SEARCHES</span>
+              <span class="meta-val">60+</span>
+            </div>
+          </div>
+          <p style="font-size: 14px; color: var(--text-muted);">
+            Institute data, animated in After Effects. A physical constraint became a production pipeline: source → generate → edit — not an "AI image," a process.
+          </p>
+        </section>
+
+        <section style="margin-bottom: 48px;">
+          <h2 style="font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+            06. Beyond Design: Building the System
+          </h2>
+          <p>
+            I didn't just design the site — I built it. A CSS design system defines color, type scale, and button sizing consistently across every page.
+          </p>
+          <ul style="padding-left: 20px; font-size: 15px; margin-bottom: 8px;">
+            <li style="margin-bottom: 8px;">A styled button that grows sideways on hover.</li>
+            <li style="margin-bottom: 8px;">A team card that reveals role, responsibilities, and contact details on hover.</li>
+            <li style="margin-bottom: 8px;">A collapsible course menu that expands on click — CMS and code working together.</li>
+            <li style="margin-bottom: 8px;">A scroll-triggered animation system in Wix Studio, so every section animates in as you scroll.</li>
+          </ul>
+          <p style="font-size: 14px; color: var(--text-muted);">Wix Studio gave the frame. The code gave it behavior.</p>
+        </section>
+
+        <section style="margin-bottom: 48px;">
+          <h2 style="font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+            07. Designing for Researchers, in English
+          </h2>
+          <p>
+            Two audiences: existing researchers who need to book scanner time without getting stuck in the ERP process, and future researchers who need a reason to be interested in the institute at all. Onboarding serves the first; the visual experience serves the second.
+          </p>
+          <p>
+            I built the site in English by default. The real audience — researchers, biotech companies, international inquiries — works in English. Hebrew wasn't an actual need, just an institutional assumption. That call came from the user, not the template.
+          </p>
+        </section>
+
+        <section style="margin-bottom: 48px;">
+          <h2 style="font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+            08. Solo, on a Constrained Platform
+          </h2>
+          <p>
+            I designed without limits in Figma, then translated that system onto a platform the university mandated — some behavior needed real code because the CMS alone couldn't do it. And this was full solo: no team to consult, no developer handoff. Research, design, code, and media — all mine.
+          </p>
+          <p style="font-size: 14px; color: var(--text-muted);">On my other case studies I was part of a team. Here, I was the entire team.</p>
+        </section>
+
+        <section style="margin-bottom: 48px;">
+          <h2 style="font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+            09. Three Takeaways
+          </h2>
+          <ul style="padding-left: 20px; font-size: 15px; margin-bottom: 8px;">
+            <li style="margin-bottom: 12px;"><strong>Even a brochure site has a product.</strong> The real operational problem — the director as bottleneck — was hiding inside a project that was supposed to be a simple showcase. I still look for that pain point in projects that look flat on the surface.</li>
+            <li style="margin-bottom: 12px;"><strong>Constraints are material.</strong> A mandated platform and a room with no camera access both became design decisions, not excuses.</li>
+            <li style="margin-bottom: 12px;"><strong>A product decision is sometimes what you choose not to build.</strong> I dropped Hebrew because the actual user didn't need it — not everything that can be added should be.</li>
+          </ul>
+        </section>
+
+        <div style="background: var(--bg-secondary); border-radius: var(--radius-md); padding: 20px 24px; font-size: 15px; color: var(--text-primary); border: 1px solid var(--border-subtle);">
+          <strong>Where this connects:</strong> behind this site is a full platform I'm now specifying to unify the institute's disconnected systems for seven types of users — same institute, same problem of knowledge stuck in one person's head, this time at scale.
+        </div>
+
+      </article>
+
+      <!-- Bottom Page Navigation -->
+      <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--border-subtle); padding-top: 32px; margin-top: 60px;">
+        <a href="ot-ai.html" class="btn-secondary">← Previous: O.T AI</a>
+        <a href="index.html#work" class="btn-primary">Back to Portfolio Grid ↑</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>© 2026 Hannah Ilievsky. All rights reserved.</span>
+        <div style="display:flex; gap:24px;">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="mailto:ilievskyhannah@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

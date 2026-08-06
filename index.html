@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hannah Ilievsky - UX/UI Designer & Product Designer</title>
+  <meta name="description" content="Portfolio of Hannah Ilievsky, UX/UI Designer & Product Designer shaping clear, considered interfaces from first idea to shipped detail. Strategic design that drives growth.">
+  
+  <!-- Fonts: Satoshi & Azeret Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <a href="#" class="nav-brand">
+          <div class="brand-avatar">
+            <div style="width:100%;height:100%;border-radius:50%;background:#1e293b;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-heading);font-size:14px;">HI</div>
+          </div>
+          <span class="brand-logo-text">Hannah Ilievsky</span>
+        </a>
+
+        <div class="nav-menu">
+          <a href="#work" class="nav-link active">Work</a>
+          <a href="#about" class="nav-link">About Me</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-icon theme-toggle-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+            <span id="theme-icon">🌙</span>
+          </button>
+          <a href="mailto:ilievskyhannah@gmail.com" class="social-btn" style="padding:8px 16px;">
+            <span>Email</span>
+          </a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="hero-cursor-trail" id="hero-cursor-trail" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span>UX/UI Designer & Product Designer</span>
+        </div>
+
+        <h1 class="hero-title text-gradient">
+          Hannah Ilievsky
+        </h1>
+
+        <p class="hero-subtitle">
+          I chase the real problem hiding behind the brief — then own it end-to-end, from user interviews to shipped code. Sometimes on a team of sixteen, sometimes alone.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#work" class="btn-primary">
+            <span>View Selected Work</span>
+            <span>↓</span>
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <span>Let's Talk</span>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SELECTED WORK SECTION
+       ========================================================================== -->
+  <section id="work" class="section">
+    <div class="container">
+      
+      <div class="section-header">
+        <div>
+          <div class="section-tag">✦ Portfolio Showcase</div>
+          <h2 class="section-title">Selected Work</h2>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="social">Social & Profile</button>
+          <button class="filter-btn" data-filter="healthcare">Healthcare UX</button>
+          <button class="filter-btn" data-filter="edtech">EdTech & AI</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- Project 1: Facts Commando -->
+        <article class="project-card" data-category="social" onclick="window.location.href='facts-commando.html'">
+          <div class="project-media">
+            <span class="project-badge">Social & Profile</span>
+            <img src="./Frame14084-blue.png" alt="Facts Commando">
+            <a href="facts-commando.html" class="project-overlay-btn" aria-label="View Facts Commando Case Study">↗</a>
+          </div>
+          <div class="project-body">
+            <div class="project-category">FACTS COMMANDO</div>
+            <h3 class="project-title"><a href="facts-commando.html">Facts Commando</a></h3>
+            <p class="project-desc">
+              Platform that fights for truth — grounded in 2 surveys and 7 deep-dive qualitative interviews.
+            </p>
+            <div class="project-stats">
+              <div class="stat-item">
+                <span class="stat-value text-accent">1.2B+</span>
+                <span class="stat-label">Views</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">15K+</span>
+                <span class="stat-label">Digital Ambassadors</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: O.T AI -->
+        <article class="project-card" data-category="edtech" onclick="window.location.href='ot-ai.html'">
+          <div class="project-media">
+            <span class="project-badge">EdTech & AI</span>
+            <img src="./ot-ai-preview.png" alt="O.T AI Platform">
+            <a href="ot-ai.html" class="project-overlay-btn" aria-label="View O.T AI Case Study">↗</a>
+          </div>
+          <div class="project-body">
+            <div class="project-category">HAIFA UNIV. & MEUHEDET HMO</div>
+            <h3 class="project-title"><a href="ot-ai.html">O.T AI Platform</a></h3>
+            <p class="project-desc">
+              Reflective AI decision-support platform for occupational therapists — research proved the answer-bot idea wrong, so I redesigned it as a Socratic AI instead.
+            </p>
+            <div class="project-stats">
+              <div class="stat-item">
+                <span class="stat-value text-accent">36</span>
+                <span class="stat-label">Session Transcripts Evaluated</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">7</span>
+                <span class="stat-label">In-Depth Interviews</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: MRI Center -->
+        <article class="project-card" data-category="healthcare" onclick="window.location.href='mri-center.html'">
+          <div class="project-media">
+            <span class="project-badge">Research Institute UX</span>
+            <img src="./mri-card-preview.png" alt="MRI Center Medical Platform">
+            <a href="mri-center.html" class="project-overlay-btn" aria-label="View MRI Center Case Study">↗</a>
+          </div>
+          <div class="project-body">
+            <div class="project-category">SOLO PROJECT</div>
+            <h3 class="project-title"><a href="mri-center.html">MRI Center</a></h3>
+            <p class="project-desc">
+              Solo-built research institute website replacing a 2013 relic — Figma design system, Wix Studio build, booking onboarding, and AI-assisted media production.
+            </p>
+            <div class="project-stats">
+              <div class="stat-item">
+                <span class="stat-value text-accent">12→0</span>
+                <span class="stat-label">Booking Inquiries</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">4,470+</span>
+                <span class="stat-label">Scans Indexed</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT ME SECTION
+       ========================================================================== -->
+  <section id="about" class="section">
+    <div class="container">
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-tag">✦ UX/UI Designer & Product Designer</div>
+          <h2 class="section-title" style="margin-bottom:24px;">More about me</h2>
+          
+          <p style="font-size: 16px; line-height: 1.7; color: var(--text-body); margin-bottom: 16px;">
+            I'm a UX/UI Designer & Product Designer and a graduate of the prestigious <strong>Bezalel Academy of Arts and Design</strong>. Across every project — whether I'm one voice on a team of sixteen or the entire team, research through code — I look for the problem hiding behind the brief: a director buried in repeat emails, a data bug heatmaps couldn't catch, therapists who needed a reflective question instead of an answer.
+          </p>
+          <p style="font-size: 16px; line-height: 1.7; color: var(--text-body); margin-bottom: 24px;">
+            Outside of product design and UX research, I'm deeply passionate about fine art, painting, sculpture, and music (having sung as a vocalist for many years). I'm also an active sports enthusiast — especially on the tennis court and in the swimming pool.
+          </p>
+
+          <div class="skills-list">
+            <span class="skill-tag">Product Design</span>
+            <span class="skill-tag">UX/UI Architecture</span>
+            <span class="skill-tag">Qualitative Research</span>
+            <span class="skill-tag">Reflective AI UX</span>
+            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag">Bezalel Academy Alum</span>
+            <span class="skill-tag">Figma & Prototyping</span>
+          </div>
+        </div>
+
+        <!-- Experience Timeline -->
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--text-h1); margin-bottom: 20px;">Experience</h3>
+          
+          <div class="exp-card" style="margin-bottom: 20px;">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role" style="font-family: var(--font-heading); font-weight: 700; color: var(--text-h1); font-size: 16px;">Product Designer & UX Architect</div>
+                <div class="exp-company" style="font-family: var(--font-mono); font-size: 13px; color: var(--accent-primary);">Tel Aviv University (Brain MRI Center)</div>
+              </div>
+              <span class="exp-period" style="font-family: var(--font-mono); font-size: 13px; color: var(--text-subtitle);">2025 — Present</span>
+            </div>
+            <p class="exp-desc" style="font-size: 14px; color: var(--text-body); margin-top: 8px;">Leading UX architecture to unify 7 fragmented institute systems on Wix Studio platform.</p>
+          </div>
+
+          <div class="exp-card" style="margin-bottom: 20px;">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role" style="font-family: var(--font-heading); font-weight: 700; color: var(--text-h1); font-size: 16px;">UX/UI Designer & Product Designer</div>
+                <div class="exp-company" style="font-family: var(--font-mono); font-size: 13px; color: var(--accent-primary);">Facts Commando</div>
+              </div>
+              <span class="exp-period" style="font-family: var(--font-mono); font-size: 13px; color: var(--text-subtitle);">2023 — 2025</span>
+            </div>
+            <p class="exp-desc" style="font-size: 14px; color: var(--text-body); margin-top: 8px;">Designed responsive architecture across 7 resolutions, user profile engine, X/Twitter integration, and qualitative research.</p>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role" style="font-family: var(--font-heading); font-weight: 700; color: var(--text-h1); font-size: 16px;">Sole UX/UI Designer & Researcher</div>
+                <div class="exp-company" style="font-family: var(--font-mono); font-size: 13px; color: var(--accent-primary);">O.T AI (Haifa Univ. & Meuhedet HMO)</div>
+              </div>
+              <span class="exp-period" style="font-family: var(--font-mono); font-size: 13px; color: var(--text-subtitle);">2022 — 2026</span>
+            </div>
+            <p class="exp-desc" style="font-size: 14px; color: var(--text-body); margin-top: 8px;">Architected reflective AI decision-support system, qualitative research, and evaluated 36 production session transcripts.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-content">
+        
+        <div class="section-tag" style="justify-content:center;">✦ CONTACT</div>
+        <h2 class="section-title" style="margin:12px 0;">Let's talk</h2>
+        <p style="font-size:17px; color:var(--text-secondary); line-height:1.6;">
+          Open to new opportunities, product design leads, and creative collaborations — reach out any time.
+        </p>
+
+        <div>
+          <a href="mailto:ilievskyhannah@gmail.com" class="contact-email-link">
+            ilievskyhannah@gmail.com
+          </a>
+        </div>
+
+        <div style="margin-bottom:32px;">
+          <button class="btn-secondary" id="copy-email-btn">
+            <span>📋 Copy Email Address</span>
+          </button>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/hannahilievsky/" target="_blank" rel="noopener" class="social-btn">LinkedIn ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>© 2026 Hannah Ilievsky. All rights reserved.</span>
+        <div style="display:flex; gap:24px;">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="mailto:ilievskyhannah@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CASE STUDY MODAL DIALOG
+       ========================================================================== -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-container" id="modal-container">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close Case Study">✕</button>
+      <div class="modal-header" id="modal-header-content"></div>
+      <div class="modal-body" id="modal-body-content"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toast">Email copied to clipboard!</div>
+
+</body>
+</html>
