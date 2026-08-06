@@ -42,6 +42,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
+     2b. Mobile Nav Toggle
+     -------------------------------------------------------------------------- */
+  const navToggleBtn = document.getElementById('nav-toggle');
+
+  if (navToggleBtn && navbarWrapper) {
+    navToggleBtn.addEventListener('click', () => {
+      const isOpen = navbarWrapper.classList.toggle('nav-open');
+      navToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    navbarWrapper.querySelectorAll('.nav-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        navbarWrapper.classList.remove('nav-open');
+        navToggleBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* --------------------------------------------------------------------------
      3. Selected Work Filtering
      -------------------------------------------------------------------------- */
   const filterBtns = document.querySelectorAll('.filter-btn');
