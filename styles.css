@@ -28,6 +28,7 @@
   --border-medium: rgba(255, 255, 255, 0.15);
 
   --font-mono: 'Azeret Mono', ui-monospace, monospace;
+  --font-display: 'Satoshi', -apple-system, 'Segoe UI', sans-serif;
   --font-sans: 'Satoshi', -apple-system, 'Segoe UI', sans-serif;
   --font-h1: var(--font-mono);
   --font-subtitle: var(--font-mono);
