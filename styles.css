@@ -387,6 +387,11 @@ img {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+[data-theme="light"] .hero-title,
+[data-theme="light"] .hero-subtitle {
+  text-shadow: none;
+}
+
 .hero-badge.text-pop,
 .hero-title.text-pop,
 .hero-subtitle.text-pop {
