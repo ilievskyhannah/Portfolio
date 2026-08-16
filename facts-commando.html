@@ -116,7 +116,7 @@
 
         <nav aria-label="Contents" class="toc">
           <p class="toc-label">CONTENTS</p>
-          <ul class="toc-list"><li><a class="toc-link" href="#s1">Where I Joined</a></li><li><a class="toc-link" href="#s2">The Problems I Found</a></li><li><a class="toc-link" href="#s3">How We Found the Solutions</a></li><li><a class="toc-link" href="#s4">The Product</a></li><li><a class="toc-link" href="#s5">What Held, and What Didn't</a></li><li><a class="toc-link" href="#s6">What I'd Do Differently</a></li><li><a class="toc-link" href="#s7">Next Steps</a></li></ul>
+          <ul class="toc-list"><li><a class="toc-link" href="#s1"><span class="toc-dot"></span><span class="toc-txt">Where I Joined</span></a></li><li><a class="toc-link" href="#s2"><span class="toc-dot"></span><span class="toc-txt">The Problems I Found</span></a></li><li><a class="toc-link" href="#s3"><span class="toc-dot"></span><span class="toc-txt">How We Found the Solutions</span></a></li><li><a class="toc-link" href="#s4"><span class="toc-dot"></span><span class="toc-txt">The Product</span></a></li><li><a class="toc-link" href="#s5"><span class="toc-dot"></span><span class="toc-txt">What Held, and What Didn't</span></a></li><li><a class="toc-link" href="#s6"><span class="toc-dot"></span><span class="toc-txt">What I'd Do Differently</span></a></li><li><a class="toc-link" href="#s7"><span class="toc-dot"></span><span class="toc-txt">Next Steps</span></a></li></ul>
         </nav>
 
         <section id="s1" style="margin-bottom: 56px;">
@@ -375,6 +375,28 @@
  .toc-link{scroll-snap-align:start}
 }
 article section[id]{scroll-margin-top:8.5rem}
+
+.toc-dot{display:none}
+@media(min-width:1280px){
+ .toc.rail{position:fixed;top:50%;left:28px;transform:translateY(-50%);width:auto;margin:0;padding:0;
+  background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border:0;z-index:60}
+ .toc.rail .toc-label{display:none}
+ .toc.rail .toc-list{flex-direction:column;align-items:flex-start;gap:15px;overflow:visible;padding:0}
+ .toc.rail .toc-link{border:0;background:none;padding:0;display:flex;align-items:center;gap:11px;
+  font-size:12px;color:var(--text-muted);transition:color .2s,font-size .2s}
+ .toc.rail .toc-dot{display:block;width:14px;height:2px;background:currentColor;opacity:.45;
+  transition:width .28s,opacity .28s;flex:none}
+ .toc.rail .toc-link.active{color:var(--accent-primary);font-size:14px}
+ .toc.rail .toc-link.active .toc-dot{width:30px;opacity:1}
+ .toc.rail .toc-txt{max-width:0;opacity:0;overflow:hidden;white-space:nowrap;
+  transition:max-width .3s ease,opacity .22s}
+ .toc.rail .toc-link.active .toc-txt,.toc.rail:hover .toc-txt{max-width:280px;opacity:1}
+ .toc.rail:hover .toc-link{color:var(--text-secondary)}
+ .toc.rail:hover .toc-link.active{color:var(--accent-primary)}
+ .toc.rail .toc-link:hover .toc-dot{width:24px;opacity:.9}
+ article section[id]{scroll-margin-top:5rem}
+}
+
 .zoomable{cursor:zoom-in;transition:opacity .2s}.zoomable:hover{opacity:.86}
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:9999;padding:24px}
 #lb.on{display:flex}
@@ -424,9 +446,19 @@ article section[id]{scroll-margin-top:8.5rem}
  if(toc){
   var sen=document.createElement('div');sen.style.cssText='position:absolute;height:1px;width:1px';
   toc.parentNode.insertBefore(sen,toc);
+  var ph=document.createElement('div');ph.style.height='0px';
+  toc.parentNode.insertBefore(ph,toc);
+  var wide=window.matchMedia('(min-width:1280px)'),h=0,off=false;
+  function apply(){
+   if(!off){toc.classList.remove('stuck','rail');ph.style.height='0px';return;}
+   if(wide.matches){h=h||toc.offsetHeight;toc.classList.add('rail');toc.classList.remove('stuck');
+    ph.style.height=h+'px';}
+   else{toc.classList.add('stuck');toc.classList.remove('rail');ph.style.height='0px';}
+  }
   if('IntersectionObserver'in window){
-   new IntersectionObserver(function(e){toc.classList.toggle('stuck',!e[0].isIntersecting);},
+   new IntersectionObserver(function(e){off=!e[0].isIntersecting;apply();},
     {rootMargin:'-64px 0px 0px 0px'}).observe(sen);}
+  (wide.addEventListener?wide.addEventListener('change',apply):wide.addListener(apply));
   var list=toc.querySelector('.toc-list');
   new MutationObserver(function(){var a=toc.querySelector('.toc-link.active');
    if(a&&list.scrollWidth>list.clientWidth){
