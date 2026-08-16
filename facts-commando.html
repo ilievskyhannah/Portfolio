@@ -74,7 +74,7 @@
     <div class="container" style="max-width: 960px;">
 
       <div style="margin-bottom: 24px;">
-        <a href="index.html#work" class="btn-secondary" style="font-size: 13px; padding: 6px 16px;">← Back to Work</a>
+        <a href="index.html#work" class="btn-secondary" style="font-size: 14px; padding: 6px 16px;">← Back to Work</a>
       </div>
 
       <!-- Section 2: Title & Subtitle (Unboxed) -->
@@ -112,10 +112,15 @@
       </div>
 
       <!-- Section 6: Deep Dive Article -->
-      <article style="margin-top: 48px; line-height: 1.75; color: var(--text-secondary);">
+      <article style="margin-top: 48px; font-size: 16px; line-height: 1.75; color: var(--text-secondary);">
 
-        <section style="margin-bottom: 56px;">
-          <h2 style="font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">Where I Joined</h2>
+        <nav aria-label="Contents" class="toc">
+          <p class="toc-label">CONTENTS</p>
+          <ul class="toc-list"><li><a class="toc-link" href="#s1">Where I Joined</a></li><li><a class="toc-link" href="#s2">The Problems I Found</a></li><li><a class="toc-link" href="#s3">How We Found the Solutions</a></li><li><a class="toc-link" href="#s4">The Product</a></li><li><a class="toc-link" href="#s5">What Held, and What Didn't</a></li><li><a class="toc-link" href="#s6">What I'd Do Differently</a></li><li><a class="toc-link" href="#s7">Next Steps</a></li></ul>
+        </nav>
+
+        <section id="s1" style="margin-bottom: 56px;">
+          <h2 style="font-family: var(--font-heading); font-size: 30px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin-bottom: 16px;">Where I Joined</h2>
           <p>
             An advocacy platform built in an emergency - fast sprints, no research. A post every 50 seconds across 15,000+ volunteers, 1.6M+ posts, 1.2B+ views. <strong>Platform-wide lifetime figures, not outcomes of the work below.</strong>
           </p>
@@ -124,12 +129,12 @@
           </p>
         </section>
 
-        <section style="margin-bottom: 56px;">
-          <h2 style="font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--text-primary); margin-bottom: 20px;">The Problems I Found</h2>
+        <section id="s2" style="margin-bottom: 56px;">
+          <h2 style="font-family: var(--font-heading); font-size: 30px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin-bottom: 20px;">The Problems I Found</h2>
           <p style="font-weight:700; color:var(--text-primary); margin-bottom:4px;">The product existed on one screen size.</p>
           <p style="margin-bottom:24px;">Mobile-only, and broken on a wide screen. Nobody had raised it. I proposed the responsive expansion and argued for it internally - the one problem here I found before any research.</p>
           <p style="margin-bottom:20px;">The other four came out of interviews I had to push for. The team trusted surveys and heatmaps. Initiating the study and selecting the 7 participants - by age, usage and tenure - were mine; the UX designer and I wrote the guide together, sat the sessions together, and worked through the findings as a pair. The guide was deliberately open: what do you like, what don't you.</p>
-          <ul style="padding-left: 20px; font-size: 15px;">
+          <ul style="padding-left: 20px; font-size: 16px;">
             <li style="margin-bottom: 10px;"><strong style="color:var(--text-primary);">Users were declining content silently.</strong> Not the feature - the content. It didn't always sit closely enough with their politics and values to carry their name.</li>
             <li style="margin-bottom: 10px;"><strong style="color:var(--text-primary);">No proof of impact.</strong> Volunteers shared with no evidence any of it landed.</li>
             <li style="margin-bottom: 10px;"><strong style="color:var(--text-primary);">No way to report a fault.</strong> Problems moved by hand - raised in an interview, messaged to me after, or spotted by an admin in the organization's WhatsApp group and sometimes never passed on.</li>
@@ -137,17 +142,17 @@
           </ul>
         </section>
 
-        <section style="margin-bottom: 56px;">
-          <h2 style="font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--text-primary); margin-bottom: 20px;">How We Found the Solutions</h2>
+        <section id="s3" style="margin-bottom: 56px;">
+          <h2 style="font-family: var(--font-heading); font-size: 30px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin-bottom: 20px;">How We Found the Solutions</h2>
           <div style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 24px; margin-bottom: 24px;">
-            <p style="font-style: italic; color: var(--text-primary); font-size: 17px; margin-bottom: 8px;">“I look critically at the posts you send, and a lot of things I simply don't share. A lot of things.”</p>
+            <p style="font-style: italic; color: var(--text-primary); font-size: 18px; margin-bottom: 8px;">“I look critically at the posts you send, and a lot of things I simply don't share. A lot of things.”</p>
             <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">- PARTICIPANT #3, UNPROMPTED</span>
           </div>
           <p>
             Premade Comments had launched weeks earlier, so I asked about it. Usage turned out to be the smaller question - some used it, some didn't. Alignment was the real one, and it set the requirement: <strong>content the user chooses</strong>, by subject and by group.
           </p>
           <div style="background: var(--bg-secondary); border-left: 4px solid var(--accent-primary); border-radius: var(--radius-md); padding: 24px 32px; margin: 24px 0;">
-            <p style="font-family: var(--font-heading); font-size: 19px; font-weight: 700; color: var(--text-primary); margin: 0; line-height: 1.6;">
+            <p style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0; line-height: 1.6;">
               To personalise content you have to know the user.<br>
               To know the user you need an account.<br>
               <span style="color: var(--accent-primary);">One finding built the whole account layer.</span>
@@ -158,139 +163,152 @@
           </p>
         </section>
 
-        <section style="margin-bottom: 40px;">
-          <h2 style="font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">The Product</h2>
-          <p style="font-family: var(--font-mono); font-size: 13px; color: var(--text-muted); margin-bottom: 36px;">DESIGNED AND SHIPPED</p>
+        <section id="s4" style="margin-bottom: 40px;">
+          <h2 style="font-family: var(--font-heading); font-size: 30px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">The Product</h2>
+          <p style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin-bottom: 36px;">DESIGNED AND SHIPPED - TAP ANY SCREEN TO ENLARGE</p>
 
-          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px;">Sharing Preferences</h3>
-          <p style="margin-bottom: 20px;">The silent rejection becomes an explicit, editable choice - subjects on one tab, groups on the other, each one reportable or removable straight from the list.</p>
+          <h3 style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin: 0 0 6px;">Sharing Preferences</h3>
+          <p style="margin-bottom: 20px; font-size: 16px;">The silent rejection becomes an explicit, editable choice - subjects on one tab, groups on the other, each one reportable or removable straight from the list.</p>
           <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:600px; width:100%; margin:0 auto 16px; box-sizing:border-box;">
-            <img src="./case-images/Sharing_Preference.png?v=2x" alt="Subject preferences" style="width:100%; display:block; border-radius:10px;">
+            <img class="zoomable" data-cap="Subjects a volunteer will put their name behind - the interview finding, made operable." src="./case-images/Sharing_Preference.png?v=2x" alt="Subject preferences" style="width:100%; display:block; border-radius:10px;">
           </div>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:48px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:460px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Sharing_Preference_Group.png?v=2x" alt="Group preferences, desktop" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Group-level control, desktop." src="./case-images/Sharing_Preference_Group.png?v=2x" alt="Group preferences, desktop" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:220px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/mobile_Sharing_preference.png?v=2x" alt="Group preferences, mobile" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Same actions, mobile." src="./case-images/mobile_Sharing_preference.png?v=2x" alt="Group preferences, mobile" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
 
-          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px;">Registration</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin: 0 0 6px;">Registration</h3>
           <p style="margin-bottom: 20px;">Split the ask. Three fields at the door, or one tap with Google - then birth <em>year</em> and country get filled in later, from the profile's edit screen, once there's a reason to ask.</p>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:16px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:260px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/mobile_Sign_up.png?v=2x" alt="Sign up" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Three fields. Everything else waits." src="./case-images/mobile_Sign_up.png?v=2x" alt="Sign up" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:260px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/mobile_Log_in.png?v=2x" alt="Log in with Google" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="One tap, for users who would abandon a form." src="./case-images/mobile_Log_in.png?v=2x" alt="Log in with Google" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:48px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:460px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Edit_profile_Desktop.png?v=2x" alt="Edit Profile, desktop" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="The same edit screen on desktop." src="./case-images/Edit_profile_Desktop.png?v=2x" alt="Edit Profile, desktop" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:220px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Edit_profile.png?v=2x" alt="Edit Profile, mobile" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Birth year, never full date of birth." src="./case-images/Edit_profile.png?v=2x" alt="Edit Profile, mobile" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
 
-          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px;">Personal Profile</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin: 0 0 6px;">Personal Profile</h3>
           <p style="margin-bottom: 20px;">The volunteer's own replies and weekly shares, paired with the platform's collective total - personal impact alongside the bigger picture.</p>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:48px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:460px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Personal_Profile_Desktop.png?v=2x" alt="Personal Profile, desktop" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Impact tracking at desktop width." src="./case-images/Personal_Profile_Desktop.png?v=2x" alt="Personal Profile, desktop" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:220px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Personal_Profile.png?v=2x" alt="Personal Profile, mobile" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="The volunteer's own numbers, not the platform's." src="./case-images/Personal_Profile.png?v=2x" alt="Personal Profile, mobile" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
 
-          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px;">Reporting</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin: 0 0 6px;">Reporting</h3>
           <p style="margin-bottom: 20px;">Named reasons instead of a free-text box, so reports arrive already sorted - technical errors on one side, group-level problems like bans and denied posts on the other. No relay, no one to remember.</p>
           <div style="display:flex; justify-content:center; margin-bottom:24px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:260px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Settings_menu.png?v=2x" alt="Settings menu, entry point to Reports" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Where reporting lives - inside the profile, not a help page." src="./case-images/Settings_menu.png?v=2x" alt="Settings menu, entry point to Reports" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:24px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:460px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Personal_technical_Report_Desktop.png?v=2x" alt="Report an error, desktop" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Error reporting, desktop." src="./case-images/Personal_technical_Report_Desktop.png?v=2x" alt="Report an error, desktop" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:220px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Personal_technical_Report.png?v=2x" alt="Report an error, mobile" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Named failure modes, so reports arrive pre-sorted." src="./case-images/Personal_technical_Report.png?v=2x" alt="Report an error, mobile" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:48px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:460px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Personal_group_report_Desktop.png?v=2x" alt="Report a group, desktop" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Group reporting, desktop." src="./case-images/Personal_group_report_Desktop.png?v=2x" alt="Report a group, desktop" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:220px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Personal_group_report.png?v=2x" alt="Report a group, mobile" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Bans and denied posts - the real risks of building on Facebook." src="./case-images/Personal_group_report.png?v=2x" alt="Report a group, mobile" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
 
-          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px;">Update Notifications</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin: 0 0 6px;">Update Notifications</h3>
           <p style="margin-bottom: 20px;">For a 50+ audience an unannounced change reads as broken. Changes now arrive as information, before the encounter.</p>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:48px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:460px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Updates.png?v=2x" alt="Update notification, desktop" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Changes arrive as information, before the encounter." src="./case-images/Updates.png?v=2x" alt="Update notification, desktop" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:220px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/mobile_Updates.png?v=2x" alt="Update notification, mobile" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="The same notification on mobile." src="./case-images/mobile_Updates.png?v=2x" alt="Update notification, mobile" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
 
-          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px;">Seven Resolutions, Two Directions</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin: 0 0 6px;">Seven Resolutions, Two Directions</h3>
           <p style="margin-bottom: 20px;">The existing design system extended into a range it was never built for - button sizing, type scale, interaction states - plus a desktop navigation menu with no precedent in the product, in Hebrew RTL and English LTR throughout.</p>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:12px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:400px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Flow_Mockup.png?v=2x" alt="Sharing flow, desktop" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Desktop, one of seven resolutions." src="./case-images/Flow_Mockup.png?v=2x" alt="Sharing flow, desktop" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:400px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Flow_popup_Mockup.png?v=2x" alt="Link copied confirmation, desktop" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="The product lives inside Facebook; the confirmation says where you now are." src="./case-images/Flow_popup_Mockup.png?v=2x" alt="Link copied confirmation, desktop" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
           <p style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted); margin-bottom:48px; text-align:center;">THE SAME SYSTEM, EXTENDED TO A FULL DESKTOP FLOW</p>
 
-          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px;">Premade Comments &amp; the Switcher</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin: 0 0 6px;">Premade Comments &amp; the Switcher</h3>
           <p style="margin-bottom: 20px;">Premade Comments post a ready-made, swappable argument per subject. The Switcher confirms the destination - Facebook, then X.</p>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:16px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:460px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Subject_Comment_Mockup.png?v=2x" alt="Choose subject for comments" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Comments carry the same subject choice as posts." src="./case-images/Subject_Comment_Mockup.png?v=2x" alt="Choose subject for comments" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:460px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Premade_comments.png?v=2x" alt="Premade Comments" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Specified with the UX designer, designed per platform." src="./case-images/Premade_comments.png?v=2x" alt="Premade Comments" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px; margin-bottom:12px;">
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:400px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/Facebook_Switcher.png?v=2x" alt="The Switcher, Facebook" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="Facebook, the original network." src="./case-images/Facebook_Switcher.png?v=2x" alt="The Switcher, Facebook" style="width:100%; display:block; border-radius:10px;">
             </div>
             <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:16px; padding:20px; max-width:400px; width:100%; box-sizing:border-box;">
-              <img src="./case-images/X_Switcher.png?v=2x" alt="The Switcher, X" style="width:100%; display:block; border-radius:10px;">
+              <img class="zoomable" data-cap="X added alongside it - a pattern, not a toggle." src="./case-images/X_Switcher.png?v=2x" alt="The Switcher, X" style="width:100%; display:block; border-radius:10px;">
             </div>
           </div>
           <p style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted); margin-bottom:48px; text-align:center;">THE SWITCHER, ABSORBING A THIRD NETWORK POST-LAUNCH</p>
         </section>
 
-        <section style="margin-bottom: 56px;">
-          <h2 style="font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">What Held, and What Didn't</h2>
+        <section id="s5" style="margin-bottom: 56px;">
+          <h2 style="font-family: var(--font-heading); font-size: 30px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin-bottom: 16px;">What Held, and What Didn't</h2>
           <p>
             The Personal Profile went into production months after I left for Tel Aviv University - <strong>shipped with zero changes to my original design files.</strong> The team later added a third network to the Switcher; the pattern absorbed it without a redesign, which is a better test of a structure than how it looked at launch.
           </p>
           <p>
-            <strong style="color:var(--text-primary);">Desktop reached 2% of sessions against 98% mobile</strong> (Clarity, May 2025). The interviews explained it: the way in was a WhatsApp group link, and a link in WhatsApp opens on a phone. Most users never knew a wide-screen version existed.
+            <strong style="color:var(--text-primary);">Desktop stayed under 5% of sessions</strong> (Clarity, May 2025). The interviews explained it: the way in was a WhatsApp group link, and a link in WhatsApp opens on a phone. Most users never knew a wide-screen version existed.
           </p>
           <p style="background: var(--bg-secondary); border-left: 3px solid var(--accent-emerald); padding: 16px 24px; margin: 24px 0; border-radius: var(--radius-sm); font-weight: 600; color: var(--text-primary);">
             The constraint was distribution, not interface.
           </p>
         </section>
 
-        <section style="margin-bottom: 56px;">
-          <h2 style="font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">What I'd Do Differently</h2>
+        <section id="s6" style="margin-bottom: 56px;">
+          <h2 style="font-family: var(--font-heading); font-size: 30px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin-bottom: 16px;">What I'd Do Differently</h2>
           <p style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">I expanded before I checked how people arrive.</p>
           <p>The gap was real; the fix was wrong. Clarity would have shown a mobile-only base coming through one external link - the right first move was to bridge the path, not widen the destination. I don't regret making the argument. I regret not validating the assumption under it.</p>
+        </section>
+
+        <section id="s7" style="margin-bottom: 56px;">
+          <h2 style="font-family: var(--font-heading); font-size: 30px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin-bottom: 16px;">Next Steps</h2>
+          <p>
+            I left before the account layer had run long enough to measure. These are the numbers I would have watched, and each one maps to a decision on this page rather than to general engagement.
+          </p>
+          <ul style="padding-left: 20px; font-size: 16px; margin-top: 16px;">
+            <li style="margin-bottom: 10px;"><strong>Preference-set rate at registration.</strong> The share of new accounts that choose at least one subject or group. Personalization was the reason the account layer exists - if people skip it, the account is cost without return.</li>
+            <li style="margin-bottom: 10px;"><strong>Share-failure rate, now visible.</strong> Failed shares were counted as successes for months. With reporting in the product, the first honest number matters more than whether it looks good.</li>
+            <li style="margin-bottom: 10px;"><strong>Reports per active volunteer.</strong> Whether faults now arrive through the product rather than through a relay - the test of whether the channel replaced the WhatsApp group or just sat beside it.</li>
+            <li style="margin-bottom: 10px;"><strong>Desktop hand-off completion.</strong> The experiment I should have run first: offer a "continue on desktop" prompt with session hand-off, and measure how many take it. That answers whether the desktop share was a distribution problem or a demand problem.</li>
+          </ul>
         </section>
 
         <section style="margin-bottom: 32px;">
@@ -298,8 +316,14 @@
             <p style="font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">
               Data tells you <em>what</em> happens.<br>Only people tell you <em>why</em>.
             </p>
-            <p style="margin: 0; font-size: 15px;">
+            <p style="margin: 0 0 20px; font-size: 16px;">
               The finding that redirected this product came to a question I never asked. The same seven conversations found a metric reporting success for shares that never happened. Quantitative data can be confidently wrong - only people tell you which part.
+            </p>
+            <p style="font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--text-primary); margin: 0 0 12px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+              In an advocacy platform,<br>the content <em>is</em> the interface.
+            </p>
+            <p style="margin: 0; font-size: 16px;">
+              When users judge each post as a decision about their own name, no amount of interface refinement reaches them - the thing being rejected isn't the screen. That reframing turned a uniform feed into content each volunteer authors, and it is the part of this project I would carry into any product where people put themselves behind what they publish.
             </p>
           </div>
         </section>
@@ -331,5 +355,61 @@
     </div>
   </footer>
 
+
+<style>
+.toc{margin-bottom:44px}
+.toc-label{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.14em;margin:0 0 14px}
+.toc-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+.toc-link{display:inline-block;padding:8px 16px;border:1px solid var(--border-subtle);border-radius:999px;font-size:14px;color:var(--text-secondary);text-decoration:none;transition:color .18s,border-color .18s,background .18s}
+.toc-link:hover,.toc-link:focus-visible{color:var(--accent-primary);border-color:var(--accent-primary);background:var(--bg-secondary)}
+.toc-link.active{color:var(--accent-primary);border-color:var(--accent-primary)}
+article section[id]{scroll-margin-top:5rem}
+.zoomable{cursor:zoom-in;transition:opacity .2s}.zoomable:hover{opacity:.86}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:9999;padding:24px}
+#lb.on{display:flex}
+#lbi{max-width:92vw;max-height:78vh;border-radius:10px}
+#lbc{color:#A3A3A3;font-size:14px;margin:16px 0 6px;max-width:760px;text-align:center;line-height:1.5}
+#lbn{font-family:var(--font-mono);font-size:12px;color:#666;letter-spacing:.1em}
+#lb button{background:none;border:0;color:#fff;cursor:pointer;position:absolute}
+#lbx{top:18px;right:24px;font-size:30px;line-height:1}
+.lbnav{top:50%;transform:translateY(-50%);font-size:34px;padding:18px 14px;opacity:.65;transition:opacity .2s}
+.lbnav:hover{opacity:1}#lbp{left:14px}#lbnx{right:14px}
+@media(max-width:640px){.lbnav{font-size:26px;padding:12px 8px}}
+</style>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button id="lbx" aria-label="Close">&times;</button>
+  <button id="lbp" class="lbnav" aria-label="Previous">&#8249;</button>
+  <button id="lbnx" class="lbnav" aria-label="Next">&#8250;</button>
+  <img id="lbi" alt=""><p id="lbc"></p><span id="lbn"></span>
+</div>
+<script>
+(function(){
+ var imgs=[].slice.call(document.querySelectorAll('.zoomable')),lb=document.getElementById('lb'),
+     i=document.getElementById('lbi'),c=document.getElementById('lbc'),n=document.getElementById('lbn'),cur=0;
+ if(!imgs.length)return;
+ function show(k){cur=(k+imgs.length)%imgs.length;var el=imgs[cur];
+  i.src=el.src;i.alt=el.alt||'';c.textContent=el.dataset.cap||'';n.textContent=(cur+1)+' / '+imgs.length;}
+ function open(k){show(k);lb.classList.add('on');document.body.style.overflow='hidden';}
+ function close(){lb.classList.remove('on');document.body.style.overflow='';}
+ imgs.forEach(function(el,k){el.addEventListener('click',function(){open(k);});});
+ document.getElementById('lbx').addEventListener('click',close);
+ document.getElementById('lbp').addEventListener('click',function(e){e.stopPropagation();show(cur-1);});
+ document.getElementById('lbnx').addEventListener('click',function(e){e.stopPropagation();show(cur+1);});
+ lb.addEventListener('click',function(e){if(e.target===lb)close();});
+ document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')close();if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1);});
+ var sx=null;
+ lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+ lb.addEventListener('touchend',function(e){if(sx===null)return;var d=e.changedTouches[0].clientX-sx;
+  if(Math.abs(d)>50)show(cur+(d<0?1:-1));sx=null;},{passive:true});
+ var ls=[].slice.call(document.querySelectorAll('.toc-link')),
+     secs=ls.map(function(a){return document.querySelector(a.getAttribute('href'));});
+ if('IntersectionObserver'in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+    var k=secs.indexOf(e.target);ls.forEach(function(a,j){a.classList.toggle('active',j===k);});}});},
+   {rootMargin:'-25% 0px -65% 0px'});
+  secs.forEach(function(x){if(x)io.observe(x);});}
+})();
+</script>
 </body>
 </html>
