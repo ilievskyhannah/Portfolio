@@ -45,11 +45,19 @@
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
 
+  /* screenshot presentation - see .screen */
+  --screen-field: #141414;
+  --screen-ring: 1px solid rgba(255, 255, 255, 0.07);
+  --screen-shadow: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.8)) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+
   --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="light"] {
+  --screen-field: #E4E6EA;
+  --screen-ring: 1px solid rgba(15, 23, 42, 0.10);
+  --screen-shadow: drop-shadow(0 18px 32px rgba(15, 23, 42, 0.18)) drop-shadow(0 4px 10px rgba(15, 23, 42, 0.10));
   --bg-primary: #EDEDED;
   --bg-secondary: #FFFFFF;
   --bg-tertiary: #E5E5E5;
@@ -1677,4 +1685,22 @@ img {
 
 .animate-fade-in {
   animation: fadeIn 0.4s ease forwards;
+}
+
+
+/* --- Screenshot presentation ------------------------------------------ */
+.screen {
+  background: var(--screen-field);
+  border: var(--screen-ring);
+  border-radius: 20px;
+  padding: 28px;
+  box-sizing: border-box;
+}
+.screen img {
+  display: block;
+  width: 100%;
+  filter: var(--screen-shadow);
+}
+@media (max-width: 640px) {
+  .screen { padding: 16px; border-radius: 16px; }
 }
