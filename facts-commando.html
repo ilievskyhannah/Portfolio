@@ -207,8 +207,8 @@
           <h3 style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin: 0 0 6px;">Update Notifications</h3>
           <p style="margin-bottom: 20px;">For a 50+ audience an unannounced change reads as broken. Changes now arrive as information, before the encounter.</p>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:16px; margin-bottom:48px;">
-            <img class="zoomable" data-group="update-notifications" data-cap="Changes arrive as information, before the encounter." src="./case-images/Updates.png?v=2x" alt="Update notification, desktop" style="max-width:220px; width:100%; display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
-            <img class="zoomable" data-group="update-notifications" data-cap="The same notification on mobile." src="./case-images/mobile_Updates.png?v=2x" alt="Update notification, mobile" style="max-width:220px; width:100%; display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+            <img class="zoomable h-match-sm" data-group="update-notifications" data-cap="Changes arrive as information, before the encounter." src="./case-images/Updates.png?v=2x" alt="Update notification, desktop" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+            <img class="zoomable h-match-sm" data-group="update-notifications" data-cap="The same notification on mobile." src="./case-images/mobile_Updates.png?v=2x" alt="Update notification, mobile" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
           </div>
 
           <h3 style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.025em; font-weight: 600; color: var(--text-primary); margin: 0 0 6px;">Seven Resolutions, Two Directions</h3>
@@ -374,6 +374,8 @@ article section[id]{scroll-margin-top:8.5rem}
 .zoomable{cursor:zoom-in;transition:opacity .2s}.zoomable:hover{opacity:.86}
 .h-match{height:450px;width:auto;max-width:100%}
 @media(max-width:900px){.h-match{height:auto;width:100%;max-width:320px}}
+.h-match-sm{height:220px;width:auto;max-width:100%}
+@media(max-width:900px){.h-match-sm{height:auto;width:100%;max-width:220px}}
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:9999;padding:24px}
 #lb.on{display:flex}
 #lbi{max-width:92vw;max-height:78vh;border-radius:10px}
