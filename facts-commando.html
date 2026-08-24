@@ -335,14 +335,14 @@
 
 
 <style>
-.toc{position:sticky;top:64px;z-index:40;margin:0 0 44px;padding:14px 0 12px;
+.toc{position:sticky;top:64px;z-index:40;margin:0 0 44px;padding:14px 16px 12px;
  background:var(--bg-glass,rgba(10,10,10,.82));backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
- border-bottom:1px solid transparent;transition:border-color .2s,padding .2s}
-.toc.stuck{border-bottom-color:var(--border-subtle);padding-top:10px;padding-bottom:10px}
+ border:1px solid var(--border-subtle);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:padding .2s}
+.toc.stuck{padding-top:10px;padding-bottom:10px}
 .toc-label{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.14em;margin:0 0 12px;transition:opacity .2s,height .2s,margin .2s}
 .toc.stuck .toc-label{opacity:0;height:0;margin:0;overflow:hidden}
 .toc-list{list-style:none;padding:2px 0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
-.toc-link{display:inline-block;white-space:nowrap;padding:8px 16px;border:1px solid var(--border-subtle);border-radius:999px;font-size:14px;color:var(--text-secondary);text-decoration:none;transition:color .18s,border-color .18s,background .18s}
+.toc-link{display:inline-block;white-space:nowrap;padding:8px 16px;border:1px solid var(--border-subtle);border-radius:999px;font-size:14px;color:var(--text-secondary);text-decoration:none;background:var(--bg-card);transition:color .18s,border-color .18s,background .18s}
 .toc-link:hover,.toc-link:focus-visible{color:var(--accent-primary);border-color:var(--accent-primary);background:var(--bg-secondary)}
 .toc-link.active{color:var(--accent-primary);border-color:var(--accent-primary);background:var(--bg-secondary)}
 @media(max-width:760px){
@@ -357,7 +357,7 @@ article section[id]{scroll-margin-top:8.5rem}
 .toc-dot{display:none}
 @media(min-width:1280px){
  .toc.rail{position:fixed;top:50%;left:28px;transform:translateY(-50%);width:auto;margin:0;padding:0;
-  background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border:0;z-index:60}
+  background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border:0;box-shadow:none;z-index:60}
  .toc.rail .toc-label{display:none}
  .toc.rail .toc-list{flex-direction:column;align-items:flex-start;gap:15px;overflow:visible;padding:0}
  .toc.rail .toc-link{border:0;background:none;padding:0;display:flex;align-items:center;gap:11px;
