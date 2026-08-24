@@ -440,7 +440,7 @@ article section[id]{scroll-margin-top:8.5rem}
    else{toc.classList.add('stuck');toc.classList.remove('rail');ph.style.height='0px';}
   }
   if('IntersectionObserver'in window){
-   new IntersectionObserver(function(e){off=!e[0].isIntersecting;apply();},
+   new IntersectionObserver(function(e){off=!e[0].isIntersecting&&e[0].boundingClientRect.top<e[0].rootBounds.top;apply();},
     {rootMargin:'-64px 0px 0px 0px'}).observe(sen);}
   (wide.addEventListener?wide.addEventListener('change',apply):wide.addListener(apply));
   var list=toc.querySelector('.toc-list');
