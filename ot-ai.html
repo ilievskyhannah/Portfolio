@@ -185,8 +185,8 @@
 
           <p style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin: 24px 0 12px;">TAP TO ENLARGE</p>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px;">
-            <img class="zoomable h-match" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-persona-anna.png" alt="Anna persona profile" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
-            <img class="zoomable h-match" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-empathymap-anna.png" alt="Anna empathy map" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+            <img class="zoomable h-match-sm" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-persona-anna.png" alt="Anna persona profile" style="display:block; border-radius:10px;">
+            <img class="zoomable h-match-sm" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-empathymap-anna.png" alt="Anna empathy map" style="display:block; border-radius:10px;">
           </div>
         </section>
 
@@ -400,6 +400,8 @@ article section[id]{scroll-margin-top:8.5rem}
 .zoomable{cursor:zoom-in;transition:opacity .2s}.zoomable:hover{opacity:.86}
 .h-match{height:450px;width:auto;max-width:100%}
 @media(max-width:900px){.h-match{height:auto;width:100%;max-width:320px}}
+.h-match-sm{height:156px;width:auto;max-width:100%}
+@media(max-width:900px){.h-match-sm{height:auto;width:100%;max-width:220px}}
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:9999;padding:24px}
 #lb.on{display:flex}
 #lbi{max-width:92vw;max-height:78vh;border-radius:10px}
