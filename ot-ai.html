@@ -172,6 +172,12 @@
               “When I finish a session that didn't go as planned, I need a space to vent and think out loud - <em>without exposing patient details</em> and without admitting to a colleague that I'm unsure - so I can walk into my next patient with clear direction.”
             </p>
           </div>
+
+          <p style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin: 24px 0 12px;">TAP TO ENLARGE</p>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px;">
+            <img class="zoomable h-match" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-persona-anna.png" alt="Anna persona profile" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+            <img class="zoomable h-match" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-empathymap-anna.png" alt="Anna empathy map" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+          </div>
         </section>
 
         <!-- Chapter 05: The Fight for Qualitative Interviews -->
@@ -180,7 +186,7 @@
             Pushing for Qualitative Interviews Against Initial Skepticism
           </h2>
           <p style="font-size: 16px; margin-bottom: 16px;">
-            Qualitative research was not in the original academic scope. The committee initially sought theoretical survey responses. I pushed back, designed the interview protocols, recruited participants, and manually transcribed 7 in-depth interviews.
+            Qualitative research was not in the original academic scope. The committee initially sought theoretical survey responses. The team felt the survey, two group sessions, and Design Thinking Workshops already gave us enough - I pushed back, arguing we still didn't understand what occupational therapists actually needed. I designed the interview protocols, recruited participants, and manually transcribed 7 in-depth interviews myself.
           </p>
           <p style="font-size: 16px; margin-bottom: 16px;">
             Reading the interview transcripts completely transformed the team's perspective. It proved that qualitative depth reveals the true <em>'why'</em> behind user behavior - a methodology I later spearheaded on Facts Commando.
@@ -370,6 +376,8 @@ article section[id]{scroll-margin-top:8.5rem}
 }
 
 .zoomable{cursor:zoom-in;transition:opacity .2s}.zoomable:hover{opacity:.86}
+.h-match{height:450px;width:auto;max-width:100%}
+@media(max-width:900px){.h-match{height:auto;width:100%;max-width:320px}}
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:9999;padding:24px}
 #lb.on{display:flex}
 #lbi{max-width:92vw;max-height:78vh;border-radius:10px}
