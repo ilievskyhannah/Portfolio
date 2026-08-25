@@ -470,25 +470,26 @@ article section[id]{scroll-margin-top:var(--toc-offset,8.5rem)}
    if(!off){toc.classList.remove('stuck','rail');ph.style.height='0px';return;}
    if(wide.matches){h=h||toc.offsetHeight;toc.classList.add('rail');toc.classList.remove('stuck');
     ph.style.height=h+'px';}
-   else{toc.classList.add('stuck');toc.classList.remove('rail');ph.style.height='0px';
-    var topOff=parseFloat(getComputedStyle(toc).top)||64;
-    document.documentElement.style.setProperty('--toc-offset',(topOff+toc.offsetHeight+16)+'px');}
+   else{toc.classList.add('stuck');toc.classList.remove('rail');ph.style.height='0px';}
   }
+  function measureOffset(){
+   if(wide.matches)return;
+   var wasStuck=toc.classList.contains('stuck'),prevT=toc.style.transition;
+   toc.style.transition='none';
+   if(!wasStuck)toc.classList.add('stuck');
+   void toc.offsetHeight;
+   var topOff=parseFloat(getComputedStyle(toc).top)||64;
+   document.documentElement.style.setProperty('--toc-offset',(topOff+toc.offsetHeight+64)+'px');
+   if(!wasStuck)toc.classList.remove('stuck');
+   void toc.offsetHeight;
+   toc.style.transition=prevT;
+  }
+  measureOffset();
   if('IntersectionObserver'in window){
    new IntersectionObserver(function(e){off=!e[0].isIntersecting&&e[0].boundingClientRect.top<e[0].rootBounds.top;apply();},
     {rootMargin:'-64px 0px 0px 0px'}).observe(sen);}
-  (wide.addEventListener?wide.addEventListener('change',apply):wide.addListener(apply));
-  ls.forEach(function(a,j){a.addEventListener('click',function(ev){
-   var sec=secs[j];if(!sec)return;
-   ev.preventDefault();
-   off=true;
-   var prevT=toc.style.transition;toc.style.transition='none';
-   apply();
-   void toc.offsetHeight;
-   toc.style.transition=prevT;
-   sec.scrollIntoView({behavior:'smooth',block:'start'});
-   history.pushState(null,'',a.getAttribute('href'));
-  });});
+  (wide.addEventListener?wide.addEventListener('change',function(){apply();measureOffset();}):wide.addListener(function(){apply();measureOffset();}));
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(measureOffset,150);});
   var list=toc.querySelector('.toc-list');
   new MutationObserver(function(){var a=toc.querySelector('.toc-link.active');
    if(a&&list.scrollWidth>list.clientWidth){
