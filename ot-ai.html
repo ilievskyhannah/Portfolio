@@ -185,8 +185,8 @@
 
           <p style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin: 24px 0 12px;">TAP TO ENLARGE</p>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px;">
-            <img class="zoomable h-match" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-persona-anna.png" alt="Anna persona profile" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
-            <img class="zoomable h-match" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-empathymap-anna.png" alt="Anna empathy map" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+            <img class="zoomable" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-persona-anna.png" alt="Anna persona profile" style="max-width:460px; width:100%; display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+            <img class="zoomable" data-group="anna-spotlight" data-cap="Four personas, one chosen - Anna's isolation, not her inexperience, was the pattern that held." src="./ot-ai-empathymap-anna.png" alt="Anna empathy map" style="max-width:460px; width:100%; display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
           </div>
         </section>
 
@@ -199,8 +199,13 @@
             Qualitative research was not in the original academic scope. The committee initially sought theoretical survey responses. The team felt the survey, two group sessions, and Design Thinking Workshops already gave us enough - I pushed back, arguing we still didn't understand what occupational therapists actually needed. I designed the interview protocols, recruited participants, and manually transcribed 7 in-depth interviews myself.
           </p>
           <p style="font-size: 16px; margin-bottom: 16px;">
-            Reading the interview transcripts completely transformed the team's perspective. It proved that qualitative depth reveals the true <em>'why'</em> behind user behavior - a methodology I later spearheaded on Facts Commando.
+            Reading the interview transcripts completely transformed the team's perspective. It proved that qualitative depth reveals the true <em>'why'</em> behind user behavior.
           </p>
+
+          <p style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin: 24px 0 12px;">TAP TO ENLARGE</p>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:16px;">
+            <img class="zoomable" data-group="card-sorting" data-cap="I chose to keep researching after the team called it closed - card sorting became the source of what the project actually turned on." src="./ot-ai-card-sorting.png" alt="Card sorting session photo" style="max-width:220px; width:100%; display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+          </div>
         </section>
 
         <!-- Chapter 06: The Turning Point -->
@@ -216,6 +221,12 @@
           <p style="font-size: 16px; margin-bottom: 16px;">
             This single insight reshaped our entire product architecture: A therapist given an answer solves one single case. A therapist prompted with a reflective question becomes a better clinician. We shifted the AI behavior from an answer bot to a <strong>reflection engine</strong>.
           </p>
+
+          <p style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin: 24px 0 12px;">TAP TO ENLARGE</p>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px;">
+            <img class="zoomable h-match" data-group="turning-point" data-cap="I chose to open with a question, not an answer - the first-use flow had to prove the reflection engine before a therapist could doubt it." src="./ot-ai-screen-chat.png" alt="Chat with AI first message" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+            <img class="zoomable h-match" data-group="turning-point" data-cap="I chose to open with a question, not an answer - the first-use flow had to prove the reflection engine before a therapist could doubt it." src="./ot-ai-flow-first-use.png" alt="First-use flow diagram" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+          </div>
         </section>
 
         <!-- Chapter 07: Two Layers of Knowledge -->
@@ -376,7 +387,7 @@
  .toc-list::-webkit-scrollbar{display:none}
  .toc-link{scroll-snap-align:start}
 }
-article section[id]{scroll-margin-top:8.5rem}
+article section[id]{scroll-margin-top:var(--toc-offset,8.5rem)}
 
 .toc-dot{display:none}
 @media(min-width:1280px){
@@ -396,7 +407,7 @@ article section[id]{scroll-margin-top:8.5rem}
  .toc.rail:hover .toc-link{color:var(--text-secondary)}
  .toc.rail:hover .toc-link.active{color:var(--accent-primary)}
  .toc.rail .toc-link:hover .toc-dot{width:24px;opacity:.9}
- article section[id]{scroll-margin-top:5rem}
+ article section[id]{scroll-margin-top:8rem}
 }
 
 .zoomable{cursor:zoom-in;transition:opacity .2s}.zoomable:hover{opacity:.86}
@@ -461,10 +472,24 @@ article section[id]{scroll-margin-top:8.5rem}
     ph.style.height=h+'px';}
    else{toc.classList.add('stuck');toc.classList.remove('rail');ph.style.height='0px';}
   }
+  function measureOffset(){
+   if(wide.matches)return;
+   var wasStuck=toc.classList.contains('stuck'),prevT=toc.style.transition;
+   toc.style.transition='none';
+   if(!wasStuck)toc.classList.add('stuck');
+   void toc.offsetHeight;
+   var topOff=parseFloat(getComputedStyle(toc).top)||64;
+   document.documentElement.style.setProperty('--toc-offset',(topOff+toc.offsetHeight+64)+'px');
+   if(!wasStuck)toc.classList.remove('stuck');
+   void toc.offsetHeight;
+   toc.style.transition=prevT;
+  }
+  measureOffset();
   if('IntersectionObserver'in window){
    new IntersectionObserver(function(e){off=!e[0].isIntersecting&&e[0].boundingClientRect.top<e[0].rootBounds.top;apply();},
     {rootMargin:'-64px 0px 0px 0px'}).observe(sen);}
-  (wide.addEventListener?wide.addEventListener('change',apply):wide.addListener(apply));
+  (wide.addEventListener?wide.addEventListener('change',function(){apply();measureOffset();}):wide.addListener(function(){apply();measureOffset();}));
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(measureOffset,150);});
   var list=toc.querySelector('.toc-list');
   new MutationObserver(function(){var a=toc.querySelector('.toc-link.active');
    if(a&&list.scrollWidth>list.clientWidth){
