@@ -274,8 +274,8 @@
 
           <p style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin: 24px 0 12px;">TAP TO ENLARGE</p>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:24px;">
-            <img class="zoomable h-courses" data-group="courses-layout" data-cap="Designed as one shared list with a single detail panel - a horizontal layout. (Course thumbnails AI-generated in Gemini.)" src="./mri-courses-figma.png" alt="Courses page, Figma design" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
-            <img class="zoomable h-courses" data-group="courses-layout" data-cap="Wix's card system couldn't support a shared panel, so I rebuilt it as independent, vertically-expanding cards instead - the constraint changed the layout, not the content." src="./mri-courses-desktop.png" alt="Courses page, live Wix build, desktop course catalog and detail view" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+            <img class="zoomable h-courses" data-group="courses-layout" data-cap="The design opened course details horizontally - a full-width row spanning the grid, with description, teaching staff and logistics in three columns." src="./mri-courses-figma-expanded.png" alt="Courses page, Figma design, course detail expanding as a horizontal row across the full grid width" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
+            <img class="zoomable h-courses" data-group="courses-layout" data-cap="The platform's repeater couldn't break a panel out of its grid cell, so details stack vertically inside the card. The row grows downward and its neighbours hold their place." src="./mri-courses-wix-expanded.png" alt="Courses page, live Wix build, course detail expanding vertically inside a single card's column" style="display:block; border-radius:10px; border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg);">
           </div>
         </section>
 
@@ -376,7 +376,7 @@ article section[id]{scroll-margin-top:8.5rem}
 @media(max-width:900px){.h-onboarding{height:auto;width:100%;max-width:320px}}
 .h-system{height:204px;width:auto;max-width:100%}
 @media(max-width:900px){.h-system{height:auto;width:100%;max-width:320px}}
-.h-courses{height:280px;width:auto;max-width:100%}
+.h-courses{height:620px;width:auto;max-width:100%}
 @media(max-width:900px){.h-courses{height:auto;width:100%;max-width:320px}}
 #lb{position:fixed;inset:0;background:#000;display:none;align-items:center;justify-content:center;flex-direction:column;z-index:9999;padding:24px}
 #lb.on{display:flex}
