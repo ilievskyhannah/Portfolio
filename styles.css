@@ -363,7 +363,6 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 24px;
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .hero-badge .dot {
@@ -382,7 +381,6 @@ img {
   letter-spacing: -0.03em;
   margin-bottom: 24px;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .hero-subtitle {
@@ -394,19 +392,11 @@ img {
   max-width: 680px;
   margin: 0 auto 36px;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 [data-theme="light"] .hero-title,
 [data-theme="light"] .hero-subtitle {
   text-shadow: none;
-}
-
-.hero-badge.text-pop,
-.hero-title.text-pop,
-.hero-subtitle.text-pop {
-  transform: scale(1.035);
-  filter: brightness(1.4);
 }
 
 .hero-cta {
@@ -455,70 +445,6 @@ img {
   background: var(--bg-card-hover);
   border-color: var(--text-primary);
   transform: translateY(-2px);
-}
-
-/* --- Hero Cursor Trail (homepage header only) --- */
-.hero-cursor-trail {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-cursor-trail img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 150px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-lg);
-  opacity: 0;
-  filter: blur(0px);
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out, filter 0.3s ease-out;
-  will-change: transform, opacity, filter;
-}
-
-.hero-cursor-trail img[data-status="active"] {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease-out, filter 0.3s ease-out;
-}
-
-.hero-cursor-trail img[data-blur="true"] {
-  filter: blur(10px);
-}
-
-@media (max-width: 768px) {
-  .hero-cursor-trail {
-    display: none;
-  }
-}
-
-/* --- Site-Wide Pixel Cursor Trail (excludes hero/case-study headers) --- */
-.pixel-trail-layer {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  overflow: hidden;
-}
-
-.pixel-trail-dot {
-  position: absolute;
-  background: var(--accent-primary);
-  border-radius: 2px;
-  transition: width 0.1s ease-out, height 0.1s ease-out;
-}
-
-@media (max-width: 768px) {
-  .pixel-trail-layer {
-    display: none;
-  }
 }
 
 /* --- Selected Work Section --- */
@@ -968,8 +894,9 @@ img {
 
 .project-stats {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px 24px;
   padding-top: 16px;
   border-top: 1px solid var(--border-subtle);
 }
@@ -984,6 +911,7 @@ img {
   font-size: 18px;
   font-weight: 700;
   color: var(--text-primary);
+  white-space: nowrap;
 }
 
 .stat-label {
