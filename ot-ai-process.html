@@ -490,5 +490,33 @@ article section[id]{scroll-margin-top:8.5rem}
 })();
 </script>
 
+<script>
+/* Deep links (#s3 etc.) from the summary page: the browser jumps before the
+   screenshots above the section have loaded, so the target drifts down.
+   Jump again once everything has loaded, unless the visitor already scrolled. */
+(function(){
+ if(!location.hash)return;
+ var moved=false;
+ ['wheel','touchmove','keydown'].forEach(function(t){
+  window.addEventListener(t,function(){moved=true;},{once:true,passive:true});});
+ window.addEventListener('load',function(){
+  if(moved)return;
+  var el=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if(!el)return;
+  function go(){
+   if(moved)return;
+   el.scrollIntoView({behavior:'instant',block:'start'});
+   /* on phones the sticky contents bar sits under the nav: keep the heading clear of both */
+   var cover=0;['.navbar-wrapper','.toc:not(.rail)'].forEach(function(q){
+    var n=document.querySelector(q);if(n)cover=Math.max(cover,n.getBoundingClientRect().bottom);});
+   var gap=el.getBoundingClientRect().top-(cover+16);
+   if(gap<0)window.scrollBy({top:gap,behavior:'instant'});
+  }
+  /* the contents nav turns into the side rail once scrolled past, which shifts
+     the page; jump again after it has settled */
+  go();setTimeout(go,350);
+ });
+})();
+</script>
 </body>
 </html>
