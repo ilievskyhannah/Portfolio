@@ -892,6 +892,14 @@ img {
   flex: 1;
 }
 
+.project-skills {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: -12px 0 20px;
+}
+
 .project-stats {
   display: flex;
   align-items: flex-start;
