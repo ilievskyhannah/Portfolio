@@ -1642,3 +1642,137 @@ img {
 @media (max-width: 640px) {
   .screen { padding: 16px; border-radius: 16px; }
 }
+
+/* --- Case study top block (30-second summary; full article lives on *-process.html) --- */
+.cs-top {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.cs-block {
+  margin-bottom: 40px;
+}
+
+.cs-block p {
+  margin: 0;
+}
+
+.cs-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+}
+
+.cs-lead {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* Results strip: data, so it is the one boxed element in the top block */
+.cs-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin: -16px 0 12px;
+}
+
+.cs-result {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cs-result-value {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.cs-result-label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.cs-result-source {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.cs-activity {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 48px;
+}
+
+.cs-activity-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-right: 8px;
+}
+
+.cs-decisions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.cs-decisions h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+.cs-more {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--border-medium);
+  text-underline-offset: 4px;
+}
+
+.cs-more:hover,
+.cs-more:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+.cs-full-link {
+  margin: 8px 0 24px;
+}
+
+.cs-back-summary {
+  margin: 8px 0 32px;
+}
+
+@media (max-width: 640px) {
+  .cs-lead { font-size: 18px; }
+  .cs-results { padding: 20px; }
+}
