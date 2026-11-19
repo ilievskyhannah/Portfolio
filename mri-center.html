@@ -14,7 +14,7 @@
   <!-- Fonts: Satoshi & Azeret Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
@@ -32,7 +32,7 @@
       })(window, document, "clarity", "script", "lbghj02u36");
   </script>
 </head>
-<body class="case-study-page">
+<body class="case-study-page v2-site">
 
   <!-- ==========================================================================
        HEADER & NAVIGATION
@@ -72,124 +72,128 @@
   </header>
 
   <!-- ==========================================================================
-       SECTION 1: HERO (Full-Bleed Main Photo Header, Edge-to-Edge)
+       v2 SUMMARY PAGE (handoff 07). Full article: mri-center-process.html
        ========================================================================== -->
-  <section class="case-study-hero-fullbleed">
-    <img src="./mri-header-hero.png" alt="MRI Center Full-Bleed Hero Showcase">
-  </section>
+  <div class="v2-page v2-page--under-nav">
+    <div class="v2-container">
 
-  <!-- ==========================================================================
-       SECTIONS 2-6: CASE STUDY CONTENT CONTAINER
-       ========================================================================== -->
-  <main class="section" style="padding-top: 40px;">
-    <div class="container" style="max-width: 960px;">
-      
-      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom: 24px;">
-        <a href="index.html#work" class="btn-secondary" style="font-size: 14px; padding: 6px 16px;">← Back to Work</a>
-        <a href="https://mri.sites.tau.ac.il" target="_blank" rel="noopener" class="btn-primary" style="font-size: 14px; padding: 6px 16px;">View Live Site ↗</a>
+      <div class="v2-topbar">
+        <nav class="v2-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html#work">← Work</a><span aria-hidden="true">/</span><span aria-current="page">MRI Center</span>
+        </nav>
+        <a class="v2-live v2-hide-phone" href="https://mri.sites.tau.ac.il" target="_blank" rel="noopener">View live site ↗</a>
       </div>
 
-      <!-- Section 2: Title & Subtitle (Unboxed) -->
-      <div class="hero-badge" style="margin-bottom: 16px;">✦ Research Institute Website • Solo Project</div>
-      <h1 class="hero-title" style="font-family: var(--font-heading); font-size: clamp(32px, 5vw, 56px); font-weight: 700; color: var(--text-h1); margin-bottom: 12px; text-align: left;">
-        MRI Center
-      </h1>
-      <p class="hero-subtitle" style="font-family: var(--font-mono); font-weight: 100; color: var(--text-subtitle); text-align: left; margin: 0 0 32px 0; max-width: 100%;">
-        A 2013 university relic nobody stayed on for more than a second - reimagined solo, from research to shipped code, for Tel Aviv University's brain imaging institute.
-      </p>
+      <main class="v2-sections">
 
-      <!-- Section 3: Metadata Box (Role & Timeline Only, Boxed) -->
-      <div class="case-study-meta-grid" style="margin-bottom: 40px;">
-        <div class="meta-item">
-          <span class="meta-label">ROLE</span>
-          <span class="meta-val">Product Designer - solo, end to end</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">TIMELINE</span>
-          <span class="meta-val">2026</span>
-        </div>
-      </div>
+        <!-- Hero: one <picture> per theme, shown by data-theme; each switches to the mobile file under 640px -->
+        <figure class="v2-hero">
+          <picture class="v2-hero__dark">
+            <source media="(max-width: 640px)" srcset="case-images/heroes/hero-mri-center-mobile@2x.png" width="342" height="287">
+            <img src="case-images/heroes/hero-mri-center@2x.png" alt="MRI Center site with the guided onboarding: step 1, log in to the university portal, and step 7, purchase the scan" width="1024" height="420" loading="lazy">
+          </picture>
+          <picture class="v2-hero__light">
+            <source media="(max-width: 640px)" srcset="case-images/heroes/hero-mri-center-mobile-light@2x.png" width="342" height="287">
+            <img src="case-images/heroes/hero-mri-center-light@2x.png" alt="MRI Center site with the guided onboarding: step 1, log in to the university portal, and step 7, purchase the scan" width="1024" height="420" loading="lazy">
+          </picture>
+        </figure>
 
-      <!-- Top block: the 30-second version. The full article lives on mri-center-process.html. -->
-      <section class="cs-top" aria-label="MRI Center summary">
-
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">Outcome</h2>
-          <p class="cs-lead">Before the new site, the director got phone calls and emails every day asking how to buy scan time and how to book it in Book-It-Lab: at least 12 regular researchers from the institute, plus many people from outside it. After the onboarding launched in 2026, the regular researchers stopped asking. For a while some outside researchers still called, because they didn't know the onboarding existed. Now they don't call either, according to the director.</p>
-        </div>
-
-        <div class="cs-results">
-          <div class="cs-result">
-            <span class="cs-result-value">12+ → 0</span>
-            <span class="cs-result-label">Regular researchers calling or emailing the director for booking help</span>
-            <span class="cs-result-source">The director, 2026</span>
+        <!-- Badges, title, lead, meta -->
+        <header class="v2-intro">
+          <div class="v2-badges">
+            <span class="v2-badge v2-hide-phone">Case study</span>
+            <span class="v2-badge">Research institute</span>
+            <span class="v2-badge v2-badge--brand">Shipped</span>
           </div>
-          <div class="cs-result">
-            <span class="cs-result-value">~5 min</span>
-            <span class="cs-result-label">Average visit (4m 53s)</span>
-            <span class="cs-result-source">Wix Analytics, last 365 days</span>
+          <h1 class="v2-title">MRI Center</h1>
+          <p class="v2-lead">The director answered booking questions one by one, by phone and email. I designed a 7-step guided onboarding on a new site, and the recurring questions stopped.</p>
+          <dl class="v2-meta">
+            <div><dt>Role</dt><dd>Product Designer</dd></div>
+            <div><dt>Team</dt><dd>Solo, end to end</dd></div>
+            <div><dt>Timeline</dt><dd>2026</dd></div>
+            <div><dt>Built with</dt><dd>Wix Studio + custom code</dd></div>
+          </dl>
+        </header>
+
+        <!-- Stats -->
+        <section class="v2-stats" aria-label="Results">
+          <div class="v2-stat"><p class="v2-stat__label">Recurring booking questions</p><p class="v2-stat__value">12+ → 0</p><p class="v2-stat__note">Regular researchers, per the director</p></div>
+          <div class="v2-stat"><p class="v2-stat__label">Average visit</p><p class="v2-stat__value">~5 min</p><p class="v2-stat__note">Wix Analytics · last 365 days</p></div>
+          <div class="v2-stat"><p class="v2-stat__label">Visits from outside Israel</p><p class="v2-stat__value">56%</p><p class="v2-stat__note">855 of 1,532 sessions</p></div>
+        </section>
+
+        <!-- Problem -->
+        <section class="v2-section">
+          <h2 class="v2-h2">The problem</h2>
+          <p class="v2-body">The site was a 2013 university template that visitors left within a second. Researchers who wanted to buy or book scan time had to call or email the director, who explained it to each of them.</p>
+          <div class="v2-note">
+            <span class="v2-badge v2-badge--brand">Solo, end to end</span>
+            <p class="v2-note__text">I started the project myself and did the research, information architecture, design system, the build in Wix Studio with custom code, and the media.</p>
           </div>
-          <div class="cs-result">
-            <span class="cs-result-value">56%</span>
-            <span class="cs-result-label">of visits from outside Israel (855 of 1,532 sessions)</span>
-            <span class="cs-result-source">Wix Analytics, last 365 days</span>
+        </section>
+
+        <!-- Key decisions -->
+        <section class="v2-section">
+          <h2 class="v2-h2">Key decisions</h2>
+          <div class="v2-decisions">
+
+            <article class="v2-decision">
+              <div class="v2-decision__head"><span class="v2-decision__num">01</span><span class="v2-badge v2-badge--brand">12+ → 0</span></div>
+              <h3 class="v2-decision__title">A walkthrough researchers click through</h3>
+              <dl class="v2-fc">
+                <dt>Found</dt><dd>Researchers needed to finish the purchase and booking themselves, without calling anyone.</dd>
+                <dt>Chose</dt><dd class="v2-fc__chose">A 7-step onboarding that walks them through both. Anyone who used to call the director is sent there instead.</dd>
+              </dl>
+              <ol class="v2-flow v2-flow--landscape">
+                <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="mri-homepage-new.png" alt="MRI Center homepage with the booking buttons" data-cap="From the homepage" width="960" height="454" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">1</span>From the homepage</p></li>
+                <li class="v2-flow__arrow" aria-hidden="true"></li>
+                <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="mri-onboarding-step1.png" alt="Onboarding step 1 of 7: log in to the university portal" data-cap="Step 1: log in" width="950" height="454" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">2</span>Step 1: log in</p></li>
+                <li class="v2-flow__arrow" aria-hidden="true"></li>
+                <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="mri-onboarding-step7.png" alt="Onboarding step 7 of 7: enter account details and purchase the scan" data-cap="Step 7: purchase" width="954" height="454" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">3</span>Step 7: purchase</p></li>
+              </ol>
+            </article>
+
+            <article class="v2-decision v2-decision--image">
+              <div>
+                <div class="v2-decision__head"><span class="v2-decision__num">02</span><span class="v2-badge v2-badge--brand">No camera in the scan room</span></div>
+                <h3 class="v2-decision__title">Media built from real sources</h3>
+                <dl class="v2-fc">
+                  <dt>Found</dt><dd>A camera can't go into the scan room safely, because metal is pulled into the magnet.</dd>
+                  <dt>Chose</dt><dd class="v2-fc__chose">I built the images and video from real footage, scans and the manufacturer's photos, edited them with AI tools, and said so in the captions.</dd>
+                </dl>
+              </div>
+              <div class="v2-shot v2-shot--wide"><img class="zoomable" src="mri-clinical-unit.png" alt="Clinical MRI unit page: the scanner and a scan on screen, built from real footage" data-cap="Clinical MRI unit" width="958" height="455" loading="lazy"></div>
+            </article>
+
+            <article class="v2-decision">
+              <div class="v2-decision__head"><span class="v2-decision__num">03</span><span class="v2-badge v2-badge--brand">56% from abroad</span></div>
+              <h3 class="v2-decision__title">English by default</h3>
+              <dl class="v2-fc">
+                <dt>Found</dt><dd>The people who use the site, researchers, biotech companies and international partners, work in English.</dd>
+                <dt>Chose</dt><dd class="v2-fc__chose">English only. Hebrew was an institutional assumption that the users didn't need.</dd>
+              </dl>
+            </article>
+
           </div>
-        </div>
-        <p class="cs-activity"><span class="cs-activity-label">Activity</span> 196 visits to the booking guide pages (Book-It-Lab 103, scan purchase 93) · solo research, design, code and media</p>
+        </section>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">Problem</h2>
-          <p>The site was a 2013 university template that visitors left within a second. Inside it was a real operational problem: buying and booking scan time was explained only by the director, one person at a time, and he was frustrated by the bureaucracy.</p>
-        </div>
+        <!-- Lesson -->
+        <aside class="v2-lesson">
+          <span class="v2-badge v2-badge--brand">What I got wrong</span>
+          <h3 class="v2-lesson__title">My Figma animations didn't work in Wix.</h3>
+          <p>I designed the animations and buttons as if they'd carry over as they were. I had to rebuild the buttons in Wix and write animation code to make them work.</p>
+          <p class="v2-lesson__next">Next time: I'd build one test section in Wix first, with the key buttons and animations, before designing the rest.</p>
+        </aside>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">My role</h2>
-          <p>Product Designer, solo, end to end, 2026. I started the project myself and did the research, information architecture, design system, build (Wix Studio with custom code) and media.</p>
-        </div>
+        <!-- Footer actions -->
+        <footer class="v2-actions">
+          <a class="v2-btn v2-btn--primary" href="mri-center-process.html">Read the full process →</a>
+          <a class="v2-btn v2-btn--outline" href="facts-commando.html">Next: Facts Commando →</a>
+        </footer>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">Key decisions</h2>
-          <ul class="cs-decisions">
-            <li>
-              <h3>A guided walkthrough instead of another explanation page.</h3>
-              <p>Researchers needed to complete the purchase and booking, not read about it. I designed a 7-step onboarding they click through, and routed everyone who used to call or email the director to it.</p>
-              <a class="cs-more" href="mri-center-process.html#s3">Read more in the full process →</a>
-            </li>
-            <li>
-              <h3>Media built from real sources instead of photos of the room.</h3>
-              <p>A camera can't go into the scan room safely, because metal is pulled into the magnet. I built imagery and video from real footage, scans and manufacturer photography, edited with AI tools, and disclosed how each was made.</p>
-              <a class="cs-more" href="mri-center-process.html#s4">Read more in the full process →</a>
-            </li>
-            <li>
-              <h3>English by default, without Hebrew.</h3>
-              <p>The people who use the site, researchers, biotech companies and international partners, work in English. Hebrew was an institutional habit, not a user need, so I left it out.</p>
-              <a class="cs-more" href="mri-center-process.html#s6">Read more in the full process →</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">What I got wrong</h2>
-          <p>I designed the animations and buttons in Figma as if they would carry over to Wix as they were. They didn't. I had to rebuild the buttons on the platform and write animation code so they would work properly. I learned to check what the platform can actually do before I finalize interactions in the design.</p>
-        </div>
-
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">What I'd do differently</h2>
-          <p>I'd build one test section in Wix early, with the key buttons and animations, before designing the rest of the interactions in Figma.</p>
-        </div>
-
-        <a href="mri-center-process.html" class="btn-primary cs-full-link">Read the full process →</a>
-
-      </section>
-
-      <!-- Bottom Page Navigation -->
-      <div class="case-nav-footer">
-        <a href="ot-ai.html" class="btn-secondary">← Previous: O.T AI</a>
-        <a href="facts-commando.html" class="btn-primary">Next Project: Facts Commando →</a>
-      </div>
-
+      </main>
     </div>
-  </main>
+  </div>
 
   <!-- ==========================================================================
        FOOTER

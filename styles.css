@@ -2057,3 +2057,7 @@ body.v2-site { background: var(--background); }
 @media (max-width: 640px) {
   .v2-decision--image .v2-shot--cover { height: auto; aspect-ratio: 400 / 260; }
 }
+
+/* Wide page screenshots in image cards (MRI decision 02): shown whole, square corners
+   like the other full-page shots */
+.v2-decision--image .v2-shot--wide img { border-radius: 2px; }
