@@ -1951,7 +1951,7 @@ img {
   .v2-fc { grid-template-columns: 1fr; gap: 0; }
   .v2-fc dd + dt { margin-top: 12px; }
   .v2-decision--image { grid-template-columns: 1fr; gap: 20px; }
-  .v2-decision--image .v2-shot { order: -1; height: 220px; }
+  .v2-decision--image .v2-shot { order: -1; height: 190px; } /* Figma: 308x190, cover and contained */
 
   .v2-flow { --shot-h: 260px; grid-template-columns: 1fr; gap: 12px; }
   .v2-flow--landscape { --shot-h: 200px; }
