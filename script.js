@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
      1. Theme Switcher (Dark / Light Mode)
      -------------------------------------------------------------------------- */
   const themeToggleBtn = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
-  
+
   // Check saved theme or system preference
   const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
   setTheme(savedTheme);
@@ -23,9 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('portfolio-theme', theme);
-    if (themeIcon) {
-      themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
-    }
+    // The button shows the mode it switches to (sun in dark, moon in light; CSS swaps the icons)
+    const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+    themeToggleBtn.setAttribute('aria-label', label);
+    themeToggleBtn.setAttribute('title', label);
   }
 
   /* --------------------------------------------------------------------------
