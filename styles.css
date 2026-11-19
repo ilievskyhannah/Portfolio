@@ -194,6 +194,13 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+/* Light mode: warm paper instead of pure white (19 Nov 2026) */
+[data-theme="light"] .navbar-wrapper.scrolled {
+  background: color-mix(in srgb, var(--background) 85%, transparent);
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+}
+
 .navbar {
   display: flex;
   align-items: center;
