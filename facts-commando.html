@@ -14,7 +14,7 @@
   <!-- Fonts: Satoshi & Azeret Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
@@ -32,7 +32,7 @@
       })(window, document, "clarity", "script", "lbghj02u36");
   </script>
 </head>
-<body class="case-study-page">
+<body class="case-study-page v2-site">
 
   <!-- ==========================================================================
        HEADER & NAVIGATION
@@ -72,119 +72,128 @@
   </header>
 
   <!-- ==========================================================================
-       SECTION 1: HERO (Full-Bleed Main Photo Header, Edge-to-Edge)
+       v2 SUMMARY PAGE (handoff 07). Full article: facts-commando-process.html
        ========================================================================== -->
-  <section class="case-study-hero-fullbleed">
-    <img src="./Artboard-2.png" alt="Facts Commando Full-Bleed Hero Showcase">
-  </section>
+  <div class="v2-page v2-page--under-nav">
+    <div class="v2-container">
 
-  <!-- ==========================================================================
-       SECTIONS 2-6: CASE STUDY CONTENT CONTAINER
-       ========================================================================== -->
-  <main class="section" style="padding-top: 40px;">
-    <div class="container" style="max-width: 960px;">
+      <nav class="v2-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html#work">← Work</a><span aria-hidden="true">/</span><span aria-current="page">Facts Commando</span>
+      </nav>
 
-      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom: 24px;">
-        <a href="index.html#work" class="btn-secondary" style="font-size: 14px; padding: 6px 16px;">← Back to Work</a>
-        <a href="https://facts-commando.com/#/actions?lang=en&amp;comm=default&amp;lic=fc" target="_blank" rel="noopener" class="btn-primary" style="font-size: 14px; padding: 6px 16px;">View Live Site ↗</a>
-      </div>
+      <main class="v2-sections">
 
-      <!-- Section 2: Title & Subtitle (Unboxed) -->
-      <div class="hero-badge" style="margin-bottom: 16px;">✦ Social &amp; Profile • Case Study</div>
-      <h1 class="hero-title" style="font-family: var(--font-heading); font-size: clamp(32px, 5vw, 56px); font-weight: 700; color: var(--text-h1); margin-bottom: 12px; text-align: left;">
-        Facts Commando
-      </h1>
-      <p class="hero-subtitle" style="font-family: var(--font-mono); font-weight: 100; color: var(--text-subtitle); text-align: left; margin: 0 0 32px 0; max-width: 100%;">
-        Platform that fights for truth - grounded in 2 surveys and 7 deep-dive qualitative interviews.
-      </p>
+        <!-- Hero: one <picture> per theme, shown by data-theme; each switches to the mobile file under 640px -->
+        <figure class="v2-hero">
+          <picture class="v2-hero__dark">
+            <source media="(max-width: 640px)" srcset="case-images/heroes/hero-facts-commando-mobile@2x.png" width="342" height="261">
+            <img src="case-images/heroes/hero-facts-commando@2x.png" alt="Facts Commando screens: sharing preferences, the personal profile and sharing posts to groups" width="1024" height="420" loading="lazy">
+          </picture>
+          <picture class="v2-hero__light">
+            <source media="(max-width: 640px)" srcset="case-images/heroes/hero-facts-commando-mobile-light@2x.png" width="342" height="261">
+            <img src="case-images/heroes/hero-facts-commando-light@2x.png" alt="Facts Commando screens: sharing preferences, the personal profile and sharing posts to groups" width="1024" height="420" loading="lazy">
+          </picture>
+        </figure>
 
-      <!-- Section 3: Metadata Box (Role & Timeline Only, Boxed) -->
-      <div class="case-study-meta-grid" style="margin-bottom: 36px;">
-        <div class="meta-item">
-          <span class="meta-label">ROLE</span>
-          <span class="meta-val">UX/UI Designer</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">TIMELINE</span>
-          <span class="meta-val">Dec 2023 – Jul 2025</span>
-        </div>
-      </div>
-
-      <!-- Top block: the 30-second version. The full article lives on facts-commando-process.html. -->
-      <section class="cs-top" aria-label="Facts Commando summary">
-
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">Outcome</h2>
-          <p class="cs-lead">The desktop version I designed launched at under 5% of usage, because most users didn't know it existed. As more of them found it, desktop grew to about 30% of usage, and it's now a regular way people use the product (Microsoft Clarity, August 2026, measured after I had moved on).</p>
-        </div>
-
-        <div class="cs-results">
-          <div class="cs-result">
-            <span class="cs-result-value">&lt;5% → ~30%</span>
-            <span class="cs-result-label">Desktop share of usage</span>
-            <span class="cs-result-source">Microsoft Clarity, May 2025 - Aug 2026</span>
+        <!-- Badges, title, lead, meta -->
+        <header class="v2-intro">
+          <div class="v2-badges">
+            <span class="v2-badge">Case study</span>
+            <span class="v2-badge">Social &amp; Profile</span>
+            <span class="v2-badge v2-badge--brand">Shipped</span>
           </div>
-          <div class="cs-result">
-            <span class="cs-result-value">89%</span>
-            <span class="cs-result-label">of 10,776 desktop sessions came from returning users (9,653)</span>
-            <span class="cs-result-source">Microsoft Clarity, May 2025 - Aug 2026</span>
+          <h1 class="v2-title">Facts Commando</h1>
+          <p class="v2-lead">The team relied on surveys. Interviews showed users arrive by phone, through WhatsApp. I designed the personal profile, where each user sets what they share and sees their impact, and a desktop version for posting.</p>
+          <dl class="v2-meta">
+            <div><dt>Role</dt><dd>UX/UI Designer</dd></div>
+            <div><dt>Team</dt><dd>Product team, agile</dd></div>
+            <div><dt>Timeline</dt><dd>Dec 2023 – May 2025</dd></div>
+            <div><dt>Platforms</dt><dd>Mobile + desktop</dd></div>
+          </dl>
+        </header>
+
+        <!-- Stats -->
+        <section class="v2-stats" aria-label="Results">
+          <div class="v2-stat"><p class="v2-stat__label">Desktop share of usage</p><p class="v2-stat__value">&lt;5% → ~30%</p><p class="v2-stat__note">Microsoft Clarity · Aug 2026</p></div>
+          <div class="v2-stat"><p class="v2-stat__label">Returning desktop sessions</p><p class="v2-stat__value">89%</p><p class="v2-stat__note">9,653 of 10,776 sessions</p></div>
+          <div class="v2-stat"><p class="v2-stat__label">User interviews</p><p class="v2-stat__value">7</p><p class="v2-stat__note">Pushed for over another survey</p></div>
+        </section>
+
+        <!-- Problem -->
+        <section class="v2-section">
+          <h2 class="v2-h2">The problem</h2>
+          <p class="v2-body">The brief was to expand the platform, but the team couldn't trust its own usage data. Users moved between the platform and social media, so heatmaps and surveys only showed half of each session.</p>
+          <div class="v2-note">
+            <span class="v2-badge v2-badge--brand">7 interviews</span>
+            <p class="v2-note__text">The lead designer felt the two surveys were enough. I pushed for interviews and ran them with the team's UX designer.</p>
           </div>
-        </div>
-        <p class="cs-activity"><span class="cs-activity-label">Activity</span> 7 user interviews · 2 surveys (579 and 384 replies) · 5 features shipped · 7 resolutions</p>
+        </section>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">Problem</h2>
-          <p>The brief was to expand the platform, but the team couldn't trust its own usage data. Users posted by moving between the platform and social media, so heatmaps and surveys only showed half of each session.</p>
-        </div>
+        <!-- Key decisions -->
+        <section class="v2-section">
+          <h2 class="v2-h2">Key decisions</h2>
+          <div class="v2-decisions">
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">My role</h2>
-          <p>UX/UI designer in a product team working in agile sprints. I led the user research and designed the personalization flow (registration, content preferences, personal profile) and the desktop version. The redesign direction was set before I joined.</p>
-        </div>
+            <article class="v2-decision">
+              <div class="v2-decision__head"><span class="v2-decision__num">01</span><span class="v2-badge v2-badge--brand">From the interviews</span></div>
+              <h3 class="v2-decision__title">A personal profile for every user</h3>
+              <dl class="v2-fc">
+                <dt>Found</dt><dd>Users wanted content that fit them and wanted to see their own impact. Everyone was anonymous, so the platform couldn't do either.</dd>
+                <dt>Chose</dt><dd class="v2-fc__chose">Sign-up, sharing preferences and a profile with impact, reporting and settings. It added a step before the first post, and we accepted that.</dd>
+              </dl>
+              <ol class="v2-flow">
+                <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="case-images/mobile_Log_in.png?v=2x" alt="Log in screen with Continue with Google, email and a Sign up link" data-cap="Sign-up" width="393" height="852" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">1</span>Sign-up</p></li>
+                <li class="v2-flow__arrow" aria-hidden="true"></li>
+                <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="case-images/mobile_Sharing_preference.png?v=2x" alt="Sharing preferences screen with subjects to share about" data-cap="Preferences" width="393" height="858" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">2</span>Preferences</p></li>
+                <li class="v2-flow__arrow" aria-hidden="true"></li>
+                <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="case-images/Personal_Profile.png?v=2x" alt="Personal profile with comments, shares and the user's impact" data-cap="Profile" width="393" height="886" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">3</span>Profile</p></li>
+              </ol>
+            </article>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">Key decisions</h2>
-          <ul class="cs-decisions">
-            <li>
-              <h3>Interviews over more data.</h3>
-              <p>The lead designer felt the surveys (579 and 384 replies) were enough. I pushed for 7 interviews because the surveys couldn't explain what happened off the platform. What we found led to the next round of development.</p>
-              <a class="cs-more" href="facts-commando-process.html#s3">Read more in the full process →</a>
-            </li>
-            <li>
-              <h3>Registration so the platform can know each user.</h3>
-              <p>The research showed that users wanted content that fit them and wanted to see their own impact. Neither was possible while everyone was anonymous. I added sign-up and a personal profile, which meant more friction before the first post. We accepted that cost because it was the only way to give users what the research asked for.</p>
-              <a class="cs-more" href="facts-commando-process.html#s4">Read more in the full process →</a>
-            </li>
-            <li>
-              <h3>Desktop as a real working surface.</h3>
-              <p>I designed the main posting flow at 7 resolutions instead of stretching the mobile version.</p>
-              <a class="cs-more" href="facts-commando-process.html#desktop">Read more in the full process →</a>
-            </li>
-          </ul>
-        </div>
+            <article class="v2-decision v2-decision--image">
+              <div>
+                <div class="v2-decision__head"><span class="v2-decision__num">02</span><span class="v2-badge v2-badge--brand">For the data problem</span></div>
+                <h3 class="v2-decision__title">Reporting from inside the profile</h3>
+                <dl class="v2-fc">
+                  <dt>Found</dt><dd>The team couldn't trust its own usage data.</dd>
+                  <dt>Chose</dt><dd class="v2-fc__chose">Users can report a group or a technical issue from their profile, so the team hears about problems directly.</dd>
+                </dl>
+              </div>
+              <div class="v2-shot v2-shot--cover"><img class="zoomable" src="case-images/fc-decision-02-reporting@2x.png" alt="Report Group panel in the personal profile" data-cap="Report a group from the profile" width="800" height="520" loading="lazy"></div>
+            </article>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">What I got wrong</h2>
-          <p>Most of our users are 60 to 90 years old, so I assumed they would prefer desktop and tablet to a small phone screen. Desktop did grow, but less than I expected. The interviews showed why: users reached the product only through WhatsApp reminders on their phones, and many didn't know there was a site to open on a computer. I learned that how people arrive at a product shapes which device they use more than their age does.</p>
-        </div>
+            <article class="v2-decision v2-decision--image">
+              <div>
+                <div class="v2-decision__head"><span class="v2-decision__num">03</span><span class="v2-badge v2-badge--brand">From the usage data</span></div>
+                <h3 class="v2-decision__title">A desktop version built for posting</h3>
+                <dl class="v2-fc">
+                  <dt>Found</dt><dd>There was no desktop version, and posting was what users did most.</dd>
+                  <dt>Chose</dt><dd class="v2-fc__chose">I designed the posting flow for 7 screen sizes across tablet and desktop.</dd>
+                </dl>
+              </div>
+              <div class="v2-shot v2-shot--cover"><img class="zoomable" src="case-images/fc-decision-03-desktop-posting@2x.png" alt="Desktop posting screen with the post and the Post Now button" data-cap="Desktop posting" width="800" height="520" loading="lazy"></div>
+            </article>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">What I'd do differently</h2>
-          <p>I'd design the way users get in, along with the product itself. That means adding a desktop link to the WhatsApp reminders and showing users the other ways into the product during our webinars. The desktop version was ready, but most users never knew it was there.</p>
-        </div>
+          </div>
+        </section>
 
-        <a href="facts-commando-process.html" class="btn-primary cs-full-link">Read the full process →</a>
+        <!-- Lesson -->
+        <aside class="v2-lesson">
+          <span class="v2-badge v2-badge--brand">What I got wrong</span>
+          <h3 class="v2-lesson__title">I assumed our older users would prefer desktop.</h3>
+          <p>Our users are 60 to 90, so desktop seemed the obvious choice. They reached the product through WhatsApp reminders on their phones, and many never knew there was a desktop site.</p>
+          <p class="v2-lesson__next">Next time: I'd put a desktop link in the WhatsApp reminders and show the other ways in during our webinars.</p>
+        </aside>
 
-      </section>
+        <!-- Footer actions -->
+        <footer class="v2-actions">
+          <a class="v2-btn v2-btn--primary" href="facts-commando-process.html">Read the full process →</a>
+          <a class="v2-btn v2-btn--outline" href="ot-ai.html">Next: O.T AI →</a>
+        </footer>
 
-      <!-- Bottom Page Navigation -->
-      <div class="case-nav-footer">
-        <a href="index.html#work" class="btn-secondary">← Back to Work</a>
-        <a href="ot-ai.html" class="btn-primary">Next Project: O.T AI →</a>
-      </div>
-
+      </main>
     </div>
-  </main>
+  </div>
 
   <!-- ==========================================================================
        FOOTER

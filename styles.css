@@ -2003,3 +2003,20 @@ img {
   .v2-actions { flex-direction: column; }
   .v2-actions .v2-btn { width: 100%; }
 }
+
+/* --- v2 summary pages inside the site (PR 2+): the fixed site nav sits above the page --- */
+body.v2-site { background: var(--background); }
+.v2-page--under-nav { padding-top: calc(64px + var(--v2-nav-h, 72px)); }
+@media (max-width: 640px) {
+  .v2-page--under-nav { padding-top: calc(24px + var(--v2-nav-h, 64px)); }
+}
+
+/* --- Tablet (641-900px): Figma covers 1440 and 390 only. Stop the image cards squeezing
+   their text into a narrow column next to the 400px image, and keep stat values on one line. --- */
+@media (min-width: 641px) and (max-width: 900px) {
+  .v2-stat { padding: 16px; }
+  .v2-stat__value { font-size: 28px; line-height: 36px; }
+  .v2-decision--image { grid-template-columns: 1fr; gap: 24px; }
+  .v2-decision--image .v2-shot { order: -1; }
+  .v2-decision--image .v2-shot--cover { height: auto; aspect-ratio: 400 / 260; }
+}
