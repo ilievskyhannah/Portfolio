@@ -14,7 +14,7 @@
   <!-- Fonts: Satoshi & Azeret Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
@@ -32,7 +32,7 @@
       })(window, document, "clarity", "script", "lbghj02u36");
   </script>
 </head>
-<body class="case-study-page">
+<body class="case-study-page v2-site">
 
   <!-- ==========================================================================
        HEADER & NAVIGATION
@@ -72,105 +72,127 @@
   </header>
 
   <!-- ==========================================================================
-       SECTION 1: HERO (Full-Bleed Main Photo Header, Edge-to-Edge)
+       v2 SUMMARY PAGE (handoff 07). Full article: ot-ai-process.html
        ========================================================================== -->
-  <section class="case-study-hero-fullbleed">
-    <img src="./ot-ai-header-v2.png" alt="O.T AI Full-Bleed Hero Showcase" id="ot-ai-hero-img">
-  </section>
+  <div class="v2-page v2-page--under-nav">
+    <div class="v2-container">
 
-  <!-- ==========================================================================
-       SECTIONS 2-6: CASE STUDY CONTENT CONTAINER
-       ========================================================================== -->
-  <main class="section" style="padding-top: 40px;">
-    <div class="container" style="max-width: 960px;">
-      
-      <div style="margin-bottom: 24px;">
-        <a href="index.html#work" class="btn-secondary" style="font-size: 14px; padding: 6px 16px;">← Back to Work</a>
+      <div class="v2-topbar">
+        <nav class="v2-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html#work">← Work</a><span aria-hidden="true">/</span><span aria-current="page">O.T AI Platform</span>
+        </nav>
       </div>
 
-      <!-- Section 2: Title & Subtitle (Unboxed) -->
-      <div class="hero-badge" style="margin-bottom: 16px;">✦ EdTech & AI • Case Study</div>
-      <h1 class="hero-title" style="font-family: var(--font-heading); font-size: clamp(32px, 5vw, 56px); font-weight: 700; color: var(--text-h1); margin-bottom: 12px; text-align: left;">
-        O.T AI Platform
-      </h1>
-      <p class="hero-subtitle" style="font-family: var(--font-mono); font-weight: 100; color: var(--text-subtitle); text-align: left; margin: 0 0 32px 0; max-width: 100%;">
-        Professional decision support & reflective AI platform for occupational therapists.
-      </p>
+      <main class="v2-sections">
 
-      <!-- Section 3: Metadata Box (Role & Timeline Only, Boxed) -->
-      <div class="case-study-meta-grid" style="margin-bottom: 40px;">
-        <div class="meta-item">
-          <span class="meta-label">ROLE</span>
-          <span class="meta-val">Sole UX/UI Designer & Researcher</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">TIMELINE</span>
-          <span class="meta-val">2022 - 2026</span>
-        </div>
-      </div>
+        <!-- Hero: one <picture> per theme, shown by data-theme; each switches to the mobile file under 640px -->
+        <figure class="v2-hero">
+          <picture class="v2-hero__dark">
+            <source media="(max-width: 640px)" srcset="case-images/heroes/hero-ot-ai-mobile@2x.png" width="342" height="264">
+            <img src="case-images/heroes/hero-ot-ai@2x.png" alt="O.T AI screens: picking a theme, the chat with Amanda and asking peers for feedback" width="1024" height="420" loading="lazy">
+          </picture>
+          <picture class="v2-hero__light">
+            <source media="(max-width: 640px)" srcset="case-images/heroes/hero-ot-ai-mobile-light@2x.png" width="342" height="264">
+            <img src="case-images/heroes/hero-ot-ai-light@2x.png" alt="O.T AI screens: picking a theme, the chat with Amanda and asking peers for feedback" width="1024" height="420" loading="lazy">
+          </picture>
+        </figure>
 
-      <!-- Top block: the 30-second version. The full article lives on ot-ai-process.html. -->
-      <section class="cs-top" aria-label="O.T AI summary">
+        <!-- Badges, title, lead, meta -->
+        <header class="v2-intro">
+          <div class="v2-badges">
+            <span class="v2-badge">Case study</span>
+            <span class="v2-badge">EdTech &amp; AI</span>
+            <span class="v2-badge v2-badge--brand">Research</span>
+          </div>
+          <h1 class="v2-title">O.T AI Platform</h1>
+          <p class="v2-lead">The plan was an answer engine for occupational therapists. In interviews, therapists said they wanted help thinking a case through, so the AI was built to ask them questions.</p>
+          <dl class="v2-meta">
+            <div><dt>Role</dt><dd>Sole UX/UI Designer &amp; Researcher</dd></div>
+            <div><dt>Team</dt><dd>Academic research team</dd></div>
+            <div><dt>Timeline</dt><dd>2022 – 2026</dd></div>
+            <div><dt>Delivered as</dt><dd>ChatGPT agent</dd></div>
+          </dl>
+        </header>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">Outcome</h2>
-          <p class="cs-lead">The AI was built as a ChatGPT agent on the findings from my research: it asks therapists reflective questions before it offers answers. I then evaluated 36 real therapist conversations against 8 clinical rubrics. They showed where the agent still fell short: in some conversations it answered too early or didn't fit the situation, and some therapists got frustrated.</p>
-        </div>
-        <p class="cs-activity"><span class="cs-activity-label">Activity</span> 7 in-depth interviews · 2 group sessions · 36 real conversations evaluated · 8 clinical rubrics</p>
+        <!-- Stats -->
+        <section class="v2-stats" aria-label="Results">
+          <div class="v2-stat"><p class="v2-stat__label">Product direction</p><p class="v2-stat__value">Answer bot → reflective AI</p><p class="v2-stat__note">Built as a ChatGPT agent on my findings</p></div>
+          <div class="v2-stat"><p class="v2-stat__label">Real conversations evaluated</p><p class="v2-stat__value">36</p><p class="v2-stat__note">Against 8 clinical rubrics</p></div>
+          <div class="v2-stat"><p class="v2-stat__label">In-depth interviews</p><p class="v2-stat__value">7</p><p class="v2-stat__note">Designed, ran and transcribed myself</p></div>
+        </section>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">Problem</h2>
-          <p>The team assumed junior therapists lacked knowledge and needed fast answers. The research showed something else: therapists at every level, including ones with almost 20 years' experience, can't discuss sensitive patient cases with anyone, so they're left to work through hard sessions alone.</p>
-        </div>
+        <!-- Problem -->
+        <section class="v2-section">
+          <h2 class="v2-h2">The problem</h2>
+          <p class="v2-body">The team assumed junior therapists lacked knowledge and needed fast answers. In the research, therapists at every level, including ones with almost 20 years' experience, said they can't discuss sensitive patient cases with anyone. They work through hard sessions alone.</p>
+          <div class="v2-note">
+            <span class="v2-badge v2-badge--brand">7 interviews</span>
+            <p class="v2-note__text">The committee wanted survey answers, and the team felt the survey, group sessions and workshops were enough. I pushed for interviews, then designed, ran and transcribed them myself.</p>
+          </div>
+        </section>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">My role</h2>
-          <p>Sole UX/UI designer and researcher in an academic team (University of Haifa, Meuhedet HMO, Shenkar), 2022–2026. I owned the research, recruitment, interviews and transcription, the user flows, the persona and the app UI, and later the evaluation of the agent's conversations.</p>
-        </div>
+        <!-- Key decisions -->
+        <section class="v2-section">
+          <h2 class="v2-h2">Key decisions</h2>
+          <div class="v2-decisions">
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">Key decisions</h2>
-          <ul class="cs-decisions">
-            <li>
-              <h3>Interviews over more survey data.</h3>
-              <p>The committee wanted survey answers, and the team felt the survey, group sessions and workshops were enough. I pushed back because we still didn't know what therapists needed. I designed the protocol, recruited participants, and ran and transcribed 7 interviews.</p>
-              <a class="cs-more" href="ot-ai-process.html#s4">Read more in the full process →</a>
-            </li>
-            <li>
-              <h3>An AI that asks questions instead of giving answers.</h3>
-              <p>We dropped the answer search engine because therapists said they wanted to be guided through their own thinking. An answer helps with one case, while a reflective question helps the therapist with the next one too.</p>
-              <a class="cs-more" href="ot-ai-process.html#s5">Read more in the full process →</a>
-            </li>
-            <li>
-              <h3>A peer community next to the bot, anonymous by default.</h3>
-              <p>A bot alone wasn't enough for therapists to feel confident, and patient privacy made sharing risky. So therapists can share a whole bot session with verified peers for feedback, with partial anonymity switched on from the start.</p>
-              <a class="cs-more" href="ot-ai-process.html#s6">Read more in the full process →</a>
-            </li>
-          </ul>
-        </div>
+            <article class="v2-decision">
+              <div class="v2-decision__head"><span class="v2-decision__num">01</span><span class="v2-badge v2-badge--brand">From the group sessions</span></div>
+              <h3 class="v2-decision__title">Start every session from a clinical theme</h3>
+              <dl class="v2-fc">
+                <dt>Found</dt><dd>The group sessions showed therapists' difficulties cluster into a few recurring clinical themes.</dd>
+                <dt>Chose</dt><dd class="v2-fc__chose">Each session starts with picking a theme, so the conversation has a focus from the first message.</dd>
+              </dl>
+              <ol class="v2-flow">
+                <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="ot-ai-screen-themes.png?v=2x" alt="Themes screen with four clinical themes to pick from" data-cap="Pick a theme" width="430" height="932" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">1</span>Pick a theme</p></li>
+                <li class="v2-flow__arrow" aria-hidden="true"></li>
+                <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="ot-ai-screen-themes-picked.png?v=2x" alt="Themes screen with a theme selected" data-cap="Theme selected" width="430" height="932" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">2</span>Theme selected</p></li>
+                <li class="v2-flow__arrow" aria-hidden="true"></li>
+                <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="ot-ai-screen-chat.png?v=2x" alt="Chat with Amanda, the reflective AI" data-cap="Chat with Amanda" width="430" height="932" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">3</span>Chat with Amanda</p></li>
+              </ol>
+            </article>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">What I got wrong</h2>
-          <p>I designed the full app UI expecting the project to get more funding and move into development. It didn't, and the product became a ChatGPT agent instead, so the screens were never built. What carried over was the behavior I'd defined from the research. I learned that when a product's format isn't settled yet, the most durable thing to design first is how it should behave.</p>
-        </div>
+            <article class="v2-decision">
+              <div class="v2-decision__head"><span class="v2-decision__num">02</span><span class="v2-badge v2-badge--brand">From the interviews</span></div>
+              <h3 class="v2-decision__title">An AI that asks therapists questions</h3>
+              <dl class="v2-fc">
+                <dt>Found</dt><dd>Therapists asked for an AI that "leads to investigation" and doesn't spoon-feed answers.</dd>
+                <dt>Chose</dt><dd class="v2-fc__chose">We dropped the planned answer search engine. The AI responds with reflective questions.</dd>
+              </dl>
+            </article>
 
-        <div class="cs-block">
-          <h2 class="cs-eyebrow">What I'd do differently</h2>
-          <p>I'd write the conversation rules early and test them with therapists as scripted conversations, before putting time into high-fidelity screens.</p>
-        </div>
+            <article class="v2-decision v2-decision--image">
+              <div>
+                <div class="v2-decision__head"><span class="v2-decision__num">03</span><span class="v2-badge v2-badge--brand">Privacy by default</span></div>
+                <h3 class="v2-decision__title">A peer community, anonymous by default</h3>
+                <dl class="v2-fc">
+                  <dt>Found</dt><dd>A bot alone wasn't enough for therapists to feel confident, and patient privacy made sharing risky.</dd>
+                  <dt>Chose</dt><dd class="v2-fc__chose">Therapists can share a whole session with verified peers for feedback. Partial anonymity is on from the start.</dd>
+                </dl>
+              </div>
+              <div class="v2-shot"><img class="zoomable" src="ot-ai-screen-peers.png?v=2x" alt="Peer feedback screen with sessions shared by verified peers" data-cap="Peer community" width="430" height="932" loading="lazy"></div>
+            </article>
 
-        <a href="ot-ai-process.html" class="btn-primary cs-full-link">Read the full process →</a>
+          </div>
+        </section>
 
-      </section>
+        <!-- Lesson -->
+        <aside class="v2-lesson">
+          <span class="v2-badge v2-badge--brand">What I got wrong</span>
+          <h3 class="v2-lesson__title">I designed the whole app before we knew it would be built.</h3>
+          <p>We expected more funding and a full build. The product became a ChatGPT agent instead, so the screens were never built. What carried over was the behaviour I'd defined from the research. In the 36 conversations, the agent still sometimes answered too early.</p>
+          <p class="v2-lesson__next">Next time: I'd write the conversation rules first and test them with therapists as scripted chats, before any high-fidelity screens.</p>
+        </aside>
 
-      <!-- Bottom Page Navigation -->
-      <div class="case-nav-footer">
-        <a href="facts-commando.html" class="btn-secondary">← Previous: Facts Commando</a>
-        <a href="mri-center.html" class="btn-primary">Next Project: MRI Center →</a>
-      </div>
+        <!-- Footer actions -->
+        <footer class="v2-actions">
+          <a class="v2-btn v2-btn--primary" href="ot-ai-process.html">Read the full process →</a>
+          <a class="v2-btn v2-btn--outline" href="mri-center.html">Next: MRI Center →</a>
+        </footer>
 
+      </main>
     </div>
-  </main>
+  </div>
 
   <!-- ==========================================================================
        FOOTER

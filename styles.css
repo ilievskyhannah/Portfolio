@@ -1873,7 +1873,7 @@ img {
 .v2-body { font: 400 15px/24px var(--font-sans); color: var(--muted-foreground); max-width: 720px; }
 
 /* no orphan words */
-.v2-title, .v2-lead, .v2-h2, .v2-decision__title, .v2-lesson__title { text-wrap: balance; }
+.v2-title, .v2-lead, .v2-h2, .v2-decision__title, .v2-lesson__title, .v2-meta dd, .v2-stat__note { text-wrap: balance; }
 .v2-body, .v2-note__text, .v2-fc dd, .v2-lesson p { text-wrap: pretty; }
 
 /* --- Badge --- */
