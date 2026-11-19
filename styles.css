@@ -1903,6 +1903,11 @@ img {
 .v2-decision--image { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 32px; align-items: center; }
 .v2-decision--image .v2-shot { height: 260px; }
 
+/* cover: pre-cropped, borderless images fill the panel edge to edge; the panel
+   supplies the border and radius. Centred, so one file serves desktop and phone. */
+.v2-shot--cover { padding: 0; }
+.v2-shot--cover img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; object-position: center; }
+
 /* flow (decision 01 - the user journey) */
 .v2-flow {
   --shot-h: 320px;
