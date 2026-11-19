@@ -2051,3 +2051,9 @@ body.v2-site { background: var(--background); }
   .v2-intro { gap: 12px; }                         /* badges / title / lead / meta / link 16 -> 12 */
   .v2-meta { padding: 12px 0; gap: 12px 24px; }    /* meta row padding and row gap 16 -> 12 */
 }
+
+/* Phone: cover panels keep the image's 400:260 shape (308x200 at 390) so nothing is cropped;
+   the Figma 308x190 panel cut the last line of the O.T AI peer feedback image (19 Nov 2026) */
+@media (max-width: 640px) {
+  .v2-decision--image .v2-shot--cover { height: auto; aspect-ratio: 400 / 260; }
+}
