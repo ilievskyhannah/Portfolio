@@ -194,6 +194,13 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+/* Light mode: warm paper instead of pure white (19 Nov 2026) */
+[data-theme="light"] .navbar-wrapper.scrolled {
+  background: color-mix(in srgb, var(--background) 85%, transparent);
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -2002,4 +2009,45 @@ img {
 
   .v2-actions { flex-direction: column; }
   .v2-actions .v2-btn { width: 100%; }
+}
+
+/* --- v2 summary pages inside the site (PR 2+): the fixed site nav sits above the page --- */
+body.v2-site { background: var(--background); }
+.v2-page--under-nav { padding-top: calc(64px + var(--v2-nav-h, 72px)); }
+@media (max-width: 640px) {
+  .v2-page--under-nav { padding-top: calc(24px + var(--v2-nav-h, 64px)); }
+}
+
+/* --- Tablet (641-900px): Figma covers 1440 and 390 only. Stop the image cards squeezing
+   their text into a narrow column next to the 400px image, and keep stat values on one line. --- */
+@media (min-width: 641px) and (max-width: 900px) {
+  .v2-stat { padding: 16px; }
+  .v2-stat__value { font-size: 28px; line-height: 36px; }
+  .v2-decision--image { grid-template-columns: 1fr; gap: 24px; }
+  .v2-decision--image .v2-shot { order: -1; }
+  .v2-decision--image .v2-shot--cover { height: auto; aspect-ratio: 400 / 260; }
+}
+
+/* --- Breadcrumb row with the live-site link at its right end (desktop); the link
+   moves under the meta row on phones --- */
+.v2-topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.v2-topbar .v2-breadcrumb { margin-bottom: 0; }
+.v2-live {
+  font: 500 14px/20px var(--font-sans); color: var(--muted-foreground);
+  text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 4px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+.v2-live:hover, .v2-live:focus-visible { color: var(--foreground); text-decoration-color: currentColor; }
+.v2-show-phone { display: none; }
+@media (max-width: 640px) {
+  .v2-topbar, .v2-hide-phone { display: none; }
+  .v2-show-phone { display: inline-block; justify-self: start; }
+}
+
+/* --- Phone: tighter spacing above the first stat (Hannah, 19 Nov) --- */
+@media (max-width: 640px) {
+  .v2-sections > .v2-intro { margin-top: -24px; }  /* hero -> intro 48 -> 24 */
+  .v2-sections > .v2-stats { margin-top: -24px; }  /* intro -> stats 48 -> 24 */
+  .v2-intro { gap: 12px; }                         /* badges / title / lead / meta / link 16 -> 12 */
+  .v2-meta { padding: 12px 0; gap: 12px 24px; }    /* meta row padding and row gap 16 -> 12 */
 }
