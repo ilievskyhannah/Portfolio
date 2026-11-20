@@ -2057,3 +2057,7 @@ body.v2-site { background: var(--background); }
 @media (max-width: 640px) {
   .v2-decision--image .v2-shot--cover { height: auto; aspect-ratio: 400 / 260; }
 }
+
+/* MRI: wide site screenshots fill their panels; keep the left side (titles, modals) in view */
+.v2-flow--landscape .v2-shot--cover img { object-position: left top; }
+.v2-shot--cover.v2-shot--left img { object-position: left center; }
