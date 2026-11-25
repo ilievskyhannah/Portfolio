@@ -2236,3 +2236,121 @@ body.v2-site { background: var(--background); }
 /* Highlight titles: two balanced lines on desktop, whatever the copy length (#102 review) */
 .v3-hl__title { max-width: 24ch; text-wrap: balance; }
 @media (max-width: 640px) { .v3-hl__title { max-width: none; } }
+
+/* ==========================================================================
+   PR B: drop-down contents (O.T AI app screens, MRI old site + full flow)
+   ========================================================================== */
+.v3-screens { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.v3-screens .v2-shot { height: 420px; }
+.v3-screens .v2-shot img { border-radius: 14px; }
+.v3-screens__cap { margin-top: 10px; font: 400 14px/22px var(--font-sans); color: var(--muted-foreground); text-wrap: pretty; }
+.v3-oldsite { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.v3-oldsite img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; }
+.v3-fullflow { overflow-x: auto; border-radius: 8px; }
+.v3-fullflow img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.v3-fullflow:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .v3-screens, .v3-oldsite { grid-template-columns: 1fr; }
+  .v3-screens .v2-shot { height: 460px; }
+  .v3-fullflow img { width: 720px; max-width: none; } /* scrolls sideways inside its box, not the page */
+}
+
+/* ==========================================================================
+   HOMEPAGE v3 (handoff 08 §8). No shadows on anything: borders, a pressed
+   state and the accent focus ring instead (replaces #101).
+   ========================================================================== */
+.navbar-wrapper.scrolled { box-shadow: none; border-bottom: 1px solid var(--border); }
+body.home-page { background: var(--background); color: var(--foreground); }
+.home { padding: calc(64px + var(--v2-nav-h, 72px)) 0 96px; display: grid; gap: 96px; }
+.home .v2-btn { padding: 10px 18px; }
+
+/* --- Intro --- */
+.home-intro__grid { display: grid; grid-template-columns: minmax(0, 1fr) 356px; gap: 48px; align-items: center; }
+.home-intro__text { position: relative; isolation: isolate; display: grid; gap: 16px; justify-items: start; }
+.home-eyebrow { font: 500 14px/20px var(--font-sans); color: var(--accent); }
+.home-name { position: relative; font: 700 72px/76px var(--font-sans); letter-spacing: -0.03em; color: var(--foreground); }
+/* the stroke sits under the name and runs right into the portrait; it never reaches the bio paragraph */
+.home-name::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  left: 40%; top: 46px; width: 440px; height: 138px;
+  background: url("case-images/brand/brush-stroke-dark@2x.png") no-repeat left center / contain;
+}
+[data-theme="light"] .home-name::after { background-image: url("case-images/brand/brush-stroke-light@2x.png"); }
+.home-tagline { max-width: 560px; font: 500 24px/32px var(--font-sans); letter-spacing: -0.01em; color: var(--foreground); text-wrap: balance; }
+.home-bio { max-width: 560px; margin-top: 24px; font: 400 16px/26px var(--font-sans); color: var(--muted-foreground); text-wrap: pretty; }
+.home-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.home-portrait { position: relative; z-index: 1; display: block; width: 356px; height: auto; justify-self: end; }
+
+/* --- Skills strip --- */
+.home-label { margin-bottom: 16px; font: 500 14px/20px var(--font-sans); color: var(--muted-foreground); }
+.home-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.home-chip { display: inline-flex; align-items: baseline; gap: 8px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 999px; }
+.home-chip__skill { font: 500 14px/20px var(--font-sans); color: var(--foreground); }
+.home-chip__where { font: 500 12px/20px var(--font-sans); color: var(--muted-foreground); }
+.home-chip a { color: var(--muted-foreground); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; border-radius: 4px; transition: color var(--transition-fast), text-decoration-color var(--transition-fast); }
+.home-chip a:hover { color: var(--foreground); text-decoration-color: currentColor; }
+.home-chip a:active { color: var(--foreground); }
+.home-chip a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* --- Selected work --- */
+.home-h2 { margin-bottom: 24px; font: 700 32px/40px var(--font-sans); letter-spacing: -0.02em; color: var(--foreground); }
+.home-cards { display: grid; gap: 24px; }
+.home-card { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color var(--transition-fast); }
+.home-card:hover { border-color: var(--muted-foreground); }
+.home-card:active { transform: translateY(1px); }
+.home-card:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.home-card .home-card__link:focus-visible { outline: none; }
+.home-card__hero { border: 0; border-bottom: 1px solid var(--border); border-radius: 0; }
+.home-card__info { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; padding: 20px 28px 24px; }
+.home-card__text { min-width: 0; flex: 1; display: grid; gap: 4px; }
+.home-card__cat { font: 500 12px/20px var(--font-sans); color: var(--muted-foreground); }
+.home-card__name { font: 700 24px/32px var(--font-sans); letter-spacing: -0.01em; color: var(--foreground); }
+.home-card__link { color: inherit; }
+.home-card__link::after { content: ""; position: absolute; inset: 0; } /* the whole card opens the case study */
+.home-card__line { font: 400 15px/24px var(--font-sans); color: var(--muted-foreground); text-wrap: pretty; }
+.home-card__side { flex: none; display: grid; justify-items: end; gap: 12px; }
+.home-card__stats { display: flex; gap: 24px; margin: 0; }
+.home-card__stats > div { display: flex; flex-direction: column-reverse; }
+.home-card__stats dt { font: 500 12px/20px var(--font-sans); color: var(--muted-foreground); }
+.home-card__stats dd { margin: 0; font: 700 20px/28px var(--font-sans); color: var(--accent); white-space: nowrap; }
+.home-card__more { font: 500 14px/20px var(--font-sans); color: var(--foreground); }
+
+/* --- About + Let's talk --- */
+.home-about__lead { max-width: 880px; font: 400 18px/30px var(--font-sans); color: var(--foreground); text-wrap: pretty; }
+.home-about__text { max-width: 880px; margin-top: 16px; font: 400 15px/26px var(--font-sans); color: var(--muted-foreground); text-wrap: pretty; }
+.home-contact > .v2-container { padding-top: 64px; border-top: 1px solid var(--border); }
+.home-contact .home-h2 { margin-bottom: 12px; }
+.home-contact__text { margin-bottom: 16px; font: 400 16px/26px var(--font-sans); color: var(--muted-foreground); }
+
+/* --- Tablet --- */
+@media (min-width: 641px) and (max-width: 900px) {
+  .home-intro__grid { grid-template-columns: minmax(0, 1fr) 260px; gap: 32px; }
+  .home-portrait { width: 260px; }
+  .home-name { font-size: 56px; line-height: 60px; }
+  .home-name::after { top: 34px; width: 340px; height: 106px; }
+  .home-card__info { flex-direction: column; align-items: flex-start; }
+  .home-card__side { justify-items: start; }
+}
+
+/* --- Phone: text first, portrait below at ~70% width; the stroke stays under the name --- */
+@media (max-width: 640px) {
+  .home { padding: calc(24px + var(--v2-nav-h, 64px)) 0 64px; gap: 64px; }
+  .home-intro__grid { grid-template-columns: 1fr; gap: 32px; }
+  .home-name { font-size: 44px; line-height: 48px; }
+  .home-name::after { left: 30%; top: 30px; width: 220px; height: 69px; }
+  .home-tagline { font-size: 20px; line-height: 28px; }
+  .home-bio { margin-top: 16px; }
+  .home-portrait { width: 70%; justify-self: center; }
+  .home-h2 { font-size: 26px; line-height: 32px; }
+  .home-card__info { flex-direction: column; align-items: flex-start; gap: 16px; padding: 16px 20px 20px; }
+  .home-card__side { justify-items: start; }
+  .home-card__stats { gap: 20px; }
+  .home-about__lead { font-size: 17px; line-height: 28px; }
+  .home-contact > .v2-container { padding-top: 48px; }
+}
+
+/* Homepage stroke: behind the lower part of the name, running right into the portrait, ending in the
+   gap above the tagline so no text line sits on it (a dark line on the blue fails 4.5:1 in light mode) */
+.home-name::after { left: 42%; top: -60px; width: 480px; height: 150px; }
+@media (min-width: 641px) and (max-width: 900px) { .home-name::after { left: 40%; top: -26px; width: 320px; height: 100px; } }
+@media (max-width: 640px) { .home-name::after { left: 36%; top: 2px; width: 192px; height: 60px; } }
