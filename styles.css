@@ -2357,3 +2357,9 @@ body.home-page { background: var(--background); color: var(--foreground); }
 
 /* Journey strip: every step title takes two lines, so the dividers line up across all 5 steps */
 @media (min-width: 641px) { .v3-journey__title { min-height: calc(2 * 22px + 12px); } }
+
+/* One corner ratio for every phone screen on the page: the radius is 10.3% of the screen width
+   (4.75% of its height for a ~0.46 phone aspect), so the same screen looks the same at any size */
+.v2-flow:not(.v2-flow--landscape) .v2-shot img,
+.v3-tile:not(.v3-tile--wide) .v2-shot:not(.v2-shot--cover) img,
+.v3-screens .v2-shot img { border-radius: 10.3% / 4.75%; }
