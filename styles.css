@@ -2232,3 +2232,7 @@ body.v2-site { background: var(--background); }
 .v3 .v2-stat__label { text-wrap: balance; }
 @media (max-width: 379px) { .v3 .v2-container { width: calc(100% - 32px); } }
 @media (max-width: 365px) { .v3 .v2-title { font-size: 30px; } }
+
+/* Highlight titles: two balanced lines on desktop, whatever the copy length (#102 review) */
+.v3-hl__title { max-width: 24ch; text-wrap: balance; }
+@media (max-width: 640px) { .v3-hl__title { max-width: none; } }
