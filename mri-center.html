@@ -303,7 +303,9 @@ article section[id]{scroll-margin-top:8.5rem}
 @media(max-width:900px){.h-courses{height:auto;width:100%;max-width:320px}}
 #lb{position:fixed;inset:0;background:#000;display:none;align-items:center;justify-content:center;flex-direction:column;z-index:9999;padding:24px}
 #lb.on{display:flex}
-#lbi{max-width:92vw;max-height:78vh;border-radius:10px}
+#lbs{height:min(80vh,760px);width:92vw;display:flex;align-items:center;justify-content:center}
+#lbi{height:100%;width:auto;max-width:100%;object-fit:contain;border-radius:0}
+@media(max-width:640px){#lbs{height:min(72vh,760px)}}
 #lbc{color:#A3A3A3;font-size:14px;margin:16px 0 6px;max-width:760px;text-align:center;line-height:1.5}
 #lbn{font-family:var(--font-mono);font-size:12px;color:#666;letter-spacing:.1em}
 #lb button{background:none;border:0;color:#fff;cursor:pointer;position:absolute}
@@ -316,13 +318,15 @@ article section[id]{scroll-margin-top:8.5rem}
   <button id="lbx" aria-label="Close">&times;</button>
   <button id="lbp" class="lbnav" aria-label="Previous">&#8249;</button>
   <button id="lbnx" class="lbnav" aria-label="Next">&#8250;</button>
-  <img id="lbi" alt=""><p id="lbc"></p><span id="lbn"></span>
+  <div id="lbs"><img id="lbi" alt=""></div><p id="lbc"></p><span id="lbn"></span>
 </div>
 <script>
 (function(){
  var allImgs=[].slice.call(document.querySelectorAll('.zoomable')),lb=document.getElementById('lb'),
      i=document.getElementById('lbi'),c=document.getElementById('lbc'),n=document.getElementById('lbn'),cur=0,imgs=[];
  function show(k){cur=(k+imgs.length)%imgs.length;var el=imgs[cur];
+  var sw=el.getBoundingClientRect().width,ratio=sw?(parseFloat(getComputedStyle(el).borderTopLeftRadius)||0)/sw:0;
+  i.style.borderRadius='0';i.onload=function(){i.style.borderRadius=(i.getBoundingClientRect().width*ratio).toFixed(1)+'px';};
   i.src=el.src;i.alt=el.alt||'';c.textContent=el.dataset.cap||'';n.textContent=(cur+1)+' / '+imgs.length;}
  function open(el){var group=el.dataset.group;
   imgs=group?allImgs.filter(function(x){return x.dataset.group===group;}):allImgs;

@@ -234,7 +234,7 @@
                 <div class="v3-bento__row v3-bento__row--3">
                   <div class="v3-tile"><div class="v2-shot v2-shot--cover"><img class="zoomable" src="case-images/fc-decision-02-reporting@2x.png" alt="Report Group: pick a group and select a reason" data-cap="Reporting" data-group="fc-screens" width="800" height="520" loading="lazy"></div><h4 class="v3-tile__title">Reporting</h4><p class="v3-tile__text">Named reasons, so reports arrive&nbsp;sorted.</p></div>
                   <div class="v3-tile"><div class="v2-shot v2-shot--cover v3-shot--top-left"><img class="zoomable" src="case-images/Premade_comments.png?v=2x" alt="Premade Comments: a ready argument for the chosen subject" data-cap="Premade Comments" data-group="fc-screens" width="1440" height="890" loading="lazy"></div><h4 class="v3-tile__title">Premade Comments</h4><p class="v3-tile__text">A ready argument per subject, which users can&nbsp;swap.</p></div>
-                  <div class="v3-tile"><div class="v2-shot"><img class="zoomable" src="case-images/mobile_Updates.png?v=2x" alt="Personal profile with a New Updates notification" data-cap="Update notifications" data-group="fc-screens" width="393" height="851" loading="lazy"></div><h4 class="v3-tile__title">Update notifications</h4><p class="v3-tile__text">Changes are announced before users meet&nbsp;them.</p></div>
+                  <div class="v3-tile"><div class="v2-shot"><img class="zoomable" src="case-images/mobile_Updates.png?v=3" alt="Personal profile with a New Updates notification" data-cap="Update notifications" data-group="fc-screens" width="393" height="851" loading="lazy"></div><h4 class="v3-tile__title">Update notifications</h4><p class="v3-tile__text">Changes are announced before users meet&nbsp;them.</p></div>
                 </div>
               </div>
             </div></div></div>
@@ -335,7 +335,9 @@ article section[id]{scroll-margin-top:8.5rem}
 @media(max-width:900px){.h-match-sm{height:auto;width:100%;max-width:220px}}
 #lb{position:fixed;inset:0;background:#000;display:none;align-items:center;justify-content:center;flex-direction:column;z-index:9999;padding:24px}
 #lb.on{display:flex}
-#lbi{max-width:92vw;max-height:78vh;border-radius:10px}
+#lbs{height:min(80vh,760px);width:92vw;display:flex;align-items:center;justify-content:center}
+#lbi{height:100%;width:auto;max-width:100%;object-fit:contain;border-radius:0}
+@media(max-width:640px){#lbs{height:min(72vh,760px)}}
 #lbc{color:#A3A3A3;font-size:14px;margin:16px 0 6px;max-width:760px;text-align:center;line-height:1.5}
 #lbn{font-family:var(--font-mono);font-size:12px;color:#666;letter-spacing:.1em}
 #lb button{background:none;border:0;color:#fff;cursor:pointer;position:absolute}
@@ -348,7 +350,7 @@ article section[id]{scroll-margin-top:8.5rem}
   <button id="lbx" aria-label="Close">&times;</button>
   <button id="lbp" class="lbnav" aria-label="Previous">&#8249;</button>
   <button id="lbnx" class="lbnav" aria-label="Next">&#8250;</button>
-  <img id="lbi" alt=""><p id="lbc"></p><span id="lbn"></span>
+  <div id="lbs"><img id="lbi" alt=""></div><p id="lbc"></p><span id="lbn"></span>
 </div>
 <script>
 (function(){
@@ -356,6 +358,8 @@ article section[id]{scroll-margin-top:8.5rem}
      i=document.getElementById('lbi'),c=document.getElementById('lbc'),n=document.getElementById('lbn'),cur=0,imgs=[];
  if(!allImgs.length)return;
  function show(k){cur=(k+imgs.length)%imgs.length;var el=imgs[cur];
+  var sw=el.getBoundingClientRect().width,ratio=sw?(parseFloat(getComputedStyle(el).borderTopLeftRadius)||0)/sw:0;
+  i.style.borderRadius='0';i.onload=function(){i.style.borderRadius=(i.getBoundingClientRect().width*ratio).toFixed(1)+'px';};
   i.src=el.src;i.alt=el.alt||'';c.textContent=el.dataset.cap||'';n.textContent=(cur+1)+' / '+imgs.length;}
  function open(el){var group=el.dataset.group;
   imgs=group?allImgs.filter(function(x){return x.dataset.group===group;}):allImgs;
