@@ -72,9 +72,9 @@
   </header>
 
   <!-- ==========================================================================
-       v2 SUMMARY PAGE (handoff 07). Full article: facts-commando-process.html
+       v3 CASE STUDY (handoff 08). The old Full process page stays, unlinked.
        ========================================================================== -->
-  <div class="v2-page v2-page--under-nav">
+  <div class="v2-page v2-page--under-nav v3">
     <div class="v2-container">
 
       <div class="v2-topbar">
@@ -90,23 +90,19 @@
         <figure class="v2-hero">
           <picture class="v2-hero__dark">
             <source media="(max-width: 640px)" srcset="case-images/heroes/hero-facts-commando-mobile@2x.png" width="342" height="261">
-            <img src="case-images/heroes/hero-facts-commando@2x.png" alt="Facts Commando screens: sharing preferences, the personal profile and sharing posts to groups" width="1024" height="420" loading="lazy">
+            <img src="case-images/heroes/hero-facts-commando@2x.png" alt="Facts Commando screens: sharing preferences, the personal profile and sharing posts to groups" width="1024" height="420">
           </picture>
           <picture class="v2-hero__light">
             <source media="(max-width: 640px)" srcset="case-images/heroes/hero-facts-commando-mobile-light@2x.png" width="342" height="261">
-            <img src="case-images/heroes/hero-facts-commando-light@2x.png" alt="Facts Commando screens: sharing preferences, the personal profile and sharing posts to groups" width="1024" height="420" loading="lazy">
+            <img src="case-images/heroes/hero-facts-commando-light@2x.png" alt="Facts Commando screens: sharing preferences, the personal profile and sharing posts to groups" width="1024" height="420">
           </picture>
         </figure>
 
-        <!-- Badges, title, lead, meta -->
+        <!-- Tags, title + stroke, lead, meta -->
         <header class="v2-intro">
-          <div class="v2-badges">
-            <span class="v2-badge v2-hide-phone">Case study</span>
-            <span class="v2-badge">Social &amp; Profile</span>
-            <span class="v2-badge v2-badge--brand">Shipped</span>
-          </div>
-          <h1 class="v2-title">Facts Commando</h1>
-          <p class="v2-lead">The team relied on surveys. Interviews showed users arrive by phone, through WhatsApp. I designed the personal profile, where each user sets what they share and sees their impact, and a desktop version for posting.</p>
+          <p class="v3-tags"><span>Case study</span><span>Social &amp; Profile</span><span>Shipped</span></p>
+          <h1 class="v2-title">Facts <span class="title-end">Commando</span></h1>
+          <p class="v2-lead">A personal profile where each user chooses what they share and sees their impact. It shipped, and it's still live without&nbsp;changes.</p>
           <dl class="v2-meta">
             <div><dt>Role</dt><dd>UX/UI Designer</dd></div>
             <div><dt>Team</dt><dd>Product team, agile</dd></div>
@@ -118,32 +114,68 @@
 
         <!-- Stats -->
         <section class="v2-stats" aria-label="Results">
-          <div class="v2-stat"><p class="v2-stat__label">Desktop share of usage</p><p class="v2-stat__value">&lt;5% → ~30%</p><p class="v2-stat__note">Microsoft Clarity · May 2025 – Aug 2026</p></div>
-          <div class="v2-stat"><p class="v2-stat__label">Returning desktop sessions</p><p class="v2-stat__value">89%</p><p class="v2-stat__note">9,653 of 10,776 sessions</p></div>
-          <div class="v2-stat"><p class="v2-stat__label">User interviews</p><p class="v2-stat__value">7</p><p class="v2-stat__note">Pushed for over another survey</p></div>
+          <div class="v2-stat"><p class="v2-stat__label">Features shipped</p><p class="v2-stat__value">5</p><p class="v2-stat__note">Live and unchanged since I&nbsp;left</p></div>
+          <div class="v2-stat"><p class="v2-stat__label">User interviews</p><p class="v2-stat__value">7</p><p class="v2-stat__note">Run with the team's UX&nbsp;designer</p></div>
+          <div class="v2-stat"><p class="v2-stat__label">Screen sizes for posting</p><p class="v2-stat__value">7</p><p class="v2-stat__note">Tablet and desktop, Hebrew and&nbsp;English</p></div>
         </section>
 
-        <!-- Problem -->
-        <section class="v2-section">
-          <h2 class="v2-h2">The problem</h2>
-          <p class="v2-body">The brief was to expand the platform, but the team couldn't trust its own usage data. Users moved between the platform and social media, so heatmaps and surveys only showed half of each session.</p>
-          <div class="v2-note">
-            <span class="v2-badge v2-badge--brand">7 interviews</span>
-            <p class="v2-note__text">The lead designer felt the two surveys were enough. I pushed for interviews and ran them with the team's UX designer.</p>
+        <!-- Highlights -->
+        <section class="v3-highlights" aria-label="Highlights">
+          <div class="v3-hl v3-hl--know">
+            <p class="v3-hl__label">Did you know?</p>
+            <h2 class="v3-hl__title">The interviews I pushed for found what the data&nbsp;couldn't.</h2>
+            <p>The team relied on session recordings and surveys. I ran interviews with our UX designer. They showed that users wanted to choose content that fits their beliefs and&nbsp;mindset.</p>
+          </div>
+          <div class="v3-hl">
+            <p class="v3-hl__label">What I'd do differently</p>
+            <h2 class="v3-hl__title">I assumed our older users would prefer&nbsp;desktop.</h2>
+            <p>They reached us through WhatsApp reminders on their phones. Next time I'd put a desktop link in those&nbsp;reminders.</p>
           </div>
         </section>
 
-        <!-- Key decisions -->
-        <section class="v2-section">
-          <h2 class="v2-h2">Key decisions</h2>
+        <!-- 01 The problem -->
+        <section class="v3-chapter" aria-labelledby="fc-ch1">
+          <h2 class="v3-chapter__head" id="fc-ch1"><span class="v3-chapter__num">01</span><span class="v3-chapter__title">The problem</span></h2>
+          <p class="v3-chapter__text">The brief was to grow the platform, but the team couldn't trust its own usage data, and users skipped posts without saying&nbsp;why.</p>
+
+          <div class="v3-dd">
+            <button class="v3-dd__bar" id="fc-dd1-bar" type="button" aria-expanded="false" aria-controls="fc-dd1"><span class="v3-dd__text"><span class="v3-dd__hook">What the surveys missed about why users skipped posts</span><span class="v3-dd__meta">7 interviews · 4 findings</span></span><svg class="v3-dd__chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4"/></svg></button>
+            <div class="v3-dd__panel" id="fc-dd1" role="region" aria-labelledby="fc-dd1-bar"><div class="v3-dd__inner"><div class="v3-dd__body">
+              <p class="v3-dd__intro">The team trusted two surveys and session recordings. I'd seen on O.T AI how much interviews reveal that numbers don't, so I made the case for them and ran them with our UX&nbsp;designer.</p>
+              <div class="v2-stats">
+                <div class="v2-stat"><p class="v2-stat__label">Interviews</p><p class="v2-stat__value">7</p><p class="v2-stat__note">Run with the team's UX&nbsp;designer</p></div>
+                <div class="v2-stat"><p class="v2-stat__label">Surveys before them</p><p class="v2-stat__value">2</p><p class="v2-stat__note">579 and 384&nbsp;respondents</p></div>
+                <div class="v2-stat"><p class="v2-stat__label">Biggest age group</p><p class="v2-stat__value">61+</p><p class="v2-stat__note">33.2% of the second&nbsp;survey</p></div>
+              </div>
+              <figure class="v3-box">
+                <figcaption class="v3-box__label">Participant #3</figcaption>
+                <blockquote class="v3-quote">“I look critically at the posts you send, ... things I simply don't&nbsp;share.”</blockquote>
+                <p class="v3-quote__note">The real question wasn't usage. It was fit: users choose their content, by subject and by&nbsp;group.</p>
+              </figure>
+              <div class="v3-box v3-findings">
+                <h3 class="v3-findings__title">What the interviews found, and what each finding led&nbsp;to</h3>
+                <ol>
+                  <li><span class="v3-findings__num">01</span><span>Users skipped posts silently when the content didn't fit their values <span aria-hidden="true">→</span> <span class="v3-findings__led">Sharing preferences</span></span></li>
+                  <li><span class="v3-findings__num">02</span><span>Users shared with no proof that any of it landed <span aria-hidden="true">→</span> <span class="v3-findings__led">My Impact, on the profile</span></span></li>
+                  <li><span class="v3-findings__num">03</span><span>There was no way to report a fault, so problems were passed on by hand or lost <span aria-hidden="true">→</span> <span class="v3-findings__led">Reporting</span></span></li>
+                  <li><span class="v3-findings__num">04</span><span>Failed shares were counted as successes for months <span aria-hidden="true">→</span> <span class="v3-findings__led">Reporting, so failures show up</span></span></li>
+                </ol>
+              </div>
+            </div></div></div>
+          </div>
+        </section>
+
+        <!-- 02 What I decided -->
+        <section class="v3-chapter" aria-labelledby="fc-ch2">
+          <h2 class="v3-chapter__head" id="fc-ch2"><span class="v3-chapter__num">02</span><span class="v3-chapter__title">What I decided</span></h2>
           <div class="v2-decisions">
 
             <article class="v2-decision">
-              <div class="v2-decision__head"><span class="v2-decision__num">01</span><span class="v2-badge v2-badge--brand">From the interviews</span></div>
+              <p class="v3-decision__eyebrow">01 · From the interviews</p>
               <h3 class="v2-decision__title">A personal profile for every user</h3>
-              <dl class="v2-fc">
-                <dt>Found</dt><dd>Users wanted content that fit them and wanted to see their own impact. Everyone was anonymous, so the platform couldn't do either.</dd>
-                <dt>Chose</dt><dd class="v2-fc__chose">Sign-up, sharing preferences and a profile with impact, reporting and settings. It added a step before the first post, and we accepted that.</dd>
+              <dl class="v3-fc">
+                <div class="v3-fc__row"><dt>Found</dt><dd>Users wanted posts that matched their beliefs, and proof that their sharing made a difference. With no profile, the platform knew nothing about them, so it could offer&nbsp;neither.</dd></div>
+                <div class="v3-fc__row v3-fc__row--chose"><dt>Chose</dt><dd>Sign-up, sharing preferences and a profile with impact, reporting and settings. It added a step before the first post, and we accepted&nbsp;that.</dd></div>
               </dl>
               <ol class="v2-flow">
                 <li class="v2-flow__step"><div class="v2-shot"><img class="zoomable" src="case-images/mobile_Log_in.png?v=2x" alt="Log in screen with Continue with Google, email and a Sign up link" data-cap="Sign-up" width="393" height="852" loading="lazy"></div><p class="v2-flow__label"><span class="v2-dot">1</span>Sign-up</p></li>
@@ -156,11 +188,11 @@
 
             <article class="v2-decision v2-decision--image">
               <div>
-                <div class="v2-decision__head"><span class="v2-decision__num">02</span><span class="v2-badge v2-badge--brand">For the data problem</span></div>
+                <p class="v3-decision__eyebrow">02 · For the data problem</p>
                 <h3 class="v2-decision__title">Reporting from inside the profile</h3>
-                <dl class="v2-fc">
-                  <dt>Found</dt><dd>The team couldn't trust its own usage data.</dd>
-                  <dt>Chose</dt><dd class="v2-fc__chose">Users can report a group or a technical issue from their profile, so the team hears about problems directly.</dd>
+                <dl class="v3-fc">
+                  <div class="v3-fc__row"><dt>Found</dt><dd>Failed shares were counted as successes for months, and users had no way to report&nbsp;it.</dd></div>
+                  <div class="v3-fc__row v3-fc__row--chose"><dt>Chose</dt><dd>Users can report a group or a technical issue from their profile, so the team hears about problems&nbsp;directly.</dd></div>
                 </dl>
               </div>
               <div class="v2-shot v2-shot--cover"><img class="zoomable" src="case-images/fc-decision-02-reporting@2x.png" alt="Report Group panel in the personal profile" data-cap="Report a group from the profile" width="800" height="520" loading="lazy"></div>
@@ -168,30 +200,70 @@
 
             <article class="v2-decision v2-decision--image">
               <div>
-                <div class="v2-decision__head"><span class="v2-decision__num">03</span><span class="v2-badge v2-badge--brand">From the usage data</span></div>
+                <p class="v3-decision__eyebrow">03 · From the usage data</p>
                 <h3 class="v2-decision__title">A desktop version built for posting</h3>
-                <dl class="v2-fc">
-                  <dt>Found</dt><dd>There was no desktop version, and posting was what users did most.</dd>
-                  <dt>Chose</dt><dd class="v2-fc__chose">I designed the posting flow for 7 screen sizes across tablet and desktop.</dd>
+                <dl class="v3-fc">
+                  <div class="v3-fc__row"><dt>Found</dt><dd>There was no desktop version, and posting was what users did&nbsp;most.</dd></div>
+                  <div class="v3-fc__row v3-fc__row--chose"><dt>Chose</dt><dd>The app ran in the browser, so instead of stretching the phone layout, I designed posting for 7 screen sizes across tablet and&nbsp;desktop.</dd></div>
                 </dl>
               </div>
               <div class="v2-shot v2-shot--cover"><img class="zoomable" src="case-images/fc-decision-03-desktop-posting@2x.png" alt="Desktop posting screen with the post and the Post Now button" data-cap="Desktop posting" width="800" height="520" loading="lazy"></div>
             </article>
 
           </div>
+
+          <div class="v3-dd">
+            <button class="v3-dd__bar" id="fc-dd2-bar" type="button" aria-expanded="false" aria-controls="fc-dd2"><span class="v3-dd__text"><span class="v3-dd__hook">From a WhatsApp link to a shared post</span><span class="v3-dd__meta">5 steps · 6 screens</span></span><svg class="v3-dd__chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4"/></svg></button>
+            <div class="v3-dd__panel" id="fc-dd2" role="region" aria-labelledby="fc-dd2-bar"><div class="v3-dd__inner"><div class="v3-dd__body">
+              <p class="v3-dd__intro">The path from the WhatsApp reminder to a shared post, and the screens that shipped, each with one line on why it's&nbsp;there.</p>
+              <ol class="v3-journey">
+                <li><span class="v3-box__label">Step 1</span><span class="v3-journey__title">Gets the WhatsApp link</span><span class="v3-box__label">Before</span><span class="v3-journey__text">To users it was a link, not a&nbsp;website.</span></li>
+                <li><span class="v3-box__label">Step 2</span><span class="v3-journey__title">Opens it on the phone</span><span class="v3-box__label">Before</span><span class="v3-journey__text">Most never knew a desktop version&nbsp;existed.</span></li>
+                <li><span class="v3-box__label">Step 3</span><span class="v3-journey__title">Signs up</span><span class="v3-box__label">Before</span><span class="v3-journey__text">Everyone was&nbsp;anonymous.</span></li>
+                <li><span class="v3-box__label">Step 4</span><span class="v3-journey__title">Chooses what to share</span><span class="v3-box__label">Before</span><span class="v3-journey__text">Users skipped posts&nbsp;silently.</span></li>
+                <li><span class="v3-box__label">Step 5</span><span class="v3-journey__title">Shares, sees the impact</span><span class="v3-box__label">Before</span><span class="v3-journey__text">No proof any of it&nbsp;landed.</span></li>
+              </ol>
+              <div class="v3-bento">
+                <div class="v3-bento__row v3-bento__row--2">
+                  <div class="v3-tile"><div class="v2-shot"><img class="zoomable" src="case-images/mobile_Sharing_preference.png?v=2x" alt="Sharing preferences: subjects the user chose to share about" data-cap="Sharing preferences" data-group="fc-screens" width="393" height="858" loading="lazy"></div><h4 class="v3-tile__title">Sharing preferences</h4><p class="v3-tile__text">Skipping a post became a choice users can see and&nbsp;edit.</p></div>
+                  <div class="v3-tile"><div class="v2-shot"><img class="zoomable" src="case-images/Personal_Profile.png?v=2x" alt="Personal profile with the user's replies, shares and My Impact" data-cap="Personal profile" data-group="fc-screens" width="393" height="886" loading="lazy"></div><h4 class="v3-tile__title">Personal profile</h4><p class="v3-tile__text">Their own replies and shares, next to the platform&nbsp;total.</p></div>
+                </div>
+                <div class="v3-tile v3-tile--wide"><div class="v2-shot"><img class="zoomable" src="case-images/Facebook_Switcher.png?v=2x" alt="Desktop posting screen with Switch Post, Switch Group and Post Now" data-cap="Posting, with the Switcher" data-group="fc-screens" width="1440" height="890" loading="lazy"></div><h4 class="v3-tile__title">Posting, with the Switcher</h4><p class="v3-tile__text">The Switcher moves the post between platforms: Facebook, then X. Posting was built for 7 screen sizes, in Hebrew and&nbsp;English.</p></div>
+                <div class="v2-stats">
+                  <div class="v2-stat"><p class="v2-stat__label">Sessions posting to Facebook and X</p><p class="v2-stat__value">11,450+</p><p class="v2-stat__note">Microsoft Clarity · May 2025 – Aug&nbsp;2026</p></div>
+                  <div class="v2-stat"><p class="v2-stat__label">Scroll depth before publishing</p><p class="v2-stat__value">92–99%</p><p class="v2-stat__note">Same period</p></div>
+                  <div class="v2-stat"><p class="v2-stat__label">Active time per session</p><p class="v2-stat__value">34 sec – 1.1 min</p><p class="v2-stat__note">Same period</p></div>
+                </div>
+                <div class="v3-bento__row v3-bento__row--3">
+                  <div class="v3-tile"><div class="v2-shot v2-shot--cover"><img class="zoomable" src="case-images/fc-decision-02-reporting@2x.png" alt="Report Group: pick a group and select a reason" data-cap="Reporting" data-group="fc-screens" width="800" height="520" loading="lazy"></div><h4 class="v3-tile__title">Reporting</h4><p class="v3-tile__text">Named reasons, so reports arrive&nbsp;sorted.</p></div>
+                  <div class="v3-tile"><div class="v2-shot v2-shot--cover v3-shot--top-left"><img class="zoomable" src="case-images/Premade_comments.png?v=2x" alt="Premade Comments: a ready argument for the chosen subject" data-cap="Premade Comments" data-group="fc-screens" width="1440" height="890" loading="lazy"></div><h4 class="v3-tile__title">Premade Comments</h4><p class="v3-tile__text">A ready argument per subject, which users can&nbsp;swap.</p></div>
+                  <div class="v3-tile"><div class="v2-shot"><img class="zoomable" src="case-images/mobile_Updates.png?v=2x" alt="Personal profile with a New Updates notification" data-cap="Update notifications" data-group="fc-screens" width="393" height="851" loading="lazy"></div><h4 class="v3-tile__title">Update notifications</h4><p class="v3-tile__text">Changes are announced before users meet&nbsp;them.</p></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
         </section>
 
-        <!-- Lesson -->
-        <aside class="v2-lesson">
-          <span class="v2-badge v2-badge--brand">What I got wrong</span>
-          <h3 class="v2-lesson__title">I assumed our older users would prefer desktop</h3>
-          <p>Our users are 60 to 90, so desktop seemed the obvious choice. They reached the product through WhatsApp reminders on their phones, and many never knew there was a desktop site.</p>
-          <p class="v2-lesson__next">Next time: I'd put a desktop link in the WhatsApp reminders and show the other ways in during our webinars.</p>
-        </aside>
+        <!-- 03 What held -->
+        <section class="v3-chapter" aria-labelledby="fc-ch3">
+          <h2 class="v3-chapter__head" id="fc-ch3"><span class="v3-chapter__num">03</span><span class="v3-chapter__title">What held</span></h2>
+          <p class="v3-chapter__text">The profile went live after I left, with no changes to my design files. Desktop has since grown to about 30% of&nbsp;usage.</p>
 
-        <!-- Footer actions -->
+          <div class="v3-dd">
+            <button class="v3-dd__bar" id="fc-dd3-bar" type="button" aria-expanded="false" aria-controls="fc-dd3"><span class="v3-dd__text"><span class="v3-dd__hook">What held after I left, and what didn't</span><span class="v3-dd__meta">Data to Aug 2026</span></span><svg class="v3-dd__chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4"/></svg></button>
+            <div class="v3-dd__panel" id="fc-dd3" role="region" aria-labelledby="fc-dd3-bar"><div class="v3-dd__inner"><div class="v3-dd__body">
+              <p class="v3-dd__intro">What stayed after I left, and what the numbers show&nbsp;now.</p>
+              <div class="v3-held">
+                <div class="v3-box"><p class="v3-box__label">Held</p><p>The profile went live after I left, with no changes to my files. A third network later fit into the Switcher without a&nbsp;redesign.</p></div>
+                <div class="v3-box"><p class="v3-box__label">Didn't</p><p>Desktop stayed under 5% in May 2025. Users arrived through a WhatsApp link, and that opens on the&nbsp;phone.</p></div>
+              </div>
+              <div class="v3-dd-note"><p class="v3-dd-note__label">August 2026</p><p>Desktop has since grown to about 30% of usage, with 89% of PC sessions from returning users. It grew after I left, so I don't count it as my&nbsp;result.</p></div>
+            </div></div></div>
+          </div>
+        </section>
+
+        <!-- Footer -->
         <footer class="v2-actions">
-          <a class="v2-btn v2-btn--primary" href="facts-commando-process.html">Read the full process →</a>
           <a class="v2-btn v2-btn--outline" href="ot-ai.html">Next: O.T AI Platform →</a>
         </footer>
 

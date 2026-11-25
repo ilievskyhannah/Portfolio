@@ -477,3 +477,14 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 });
+
+/* v3 drop-downs (handoff 08 s5): the bar is a <button aria-expanded aria-controls>;
+   Enter and Space work natively. Closed by default; CSS animates the height. */
+document.querySelectorAll('.v3-dd__bar').forEach(function (bar) {
+  var dd = bar.closest('.v3-dd');
+  bar.addEventListener('click', function () {
+    var open = bar.getAttribute('aria-expanded') !== 'true';
+    bar.setAttribute('aria-expanded', String(open));
+    dd.classList.toggle('is-open', open);
+  });
+});
