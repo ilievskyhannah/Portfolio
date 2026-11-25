@@ -325,8 +325,8 @@ article section[id]{scroll-margin-top:8.5rem}
  var allImgs=[].slice.call(document.querySelectorAll('.zoomable')),lb=document.getElementById('lb'),
      i=document.getElementById('lbi'),c=document.getElementById('lbc'),n=document.getElementById('lbn'),cur=0,imgs=[];
  function show(k){cur=(k+imgs.length)%imgs.length;var el=imgs[cur];
-  var sw=el.getBoundingClientRect().width,ratio=sw?(parseFloat(getComputedStyle(el).borderTopLeftRadius)||0)/sw:0;
-  i.style.borderRadius='0';i.onload=function(){i.style.borderRadius=(i.getBoundingClientRect().width*ratio).toFixed(1)+'px';};
+  var br=getComputedStyle(el).borderTopLeftRadius,sw=el.getBoundingClientRect().width,ratio=sw?(parseFloat(br)||0)/sw:0;
+  i.style.borderRadius='0';i.onload=function(){i.style.borderRadius=br.indexOf('%')>-1?br.split(' ').join(' / '):(i.getBoundingClientRect().width*ratio).toFixed(1)+'px';};
   i.src=el.src;i.alt=el.alt||'';c.textContent=el.dataset.cap||'';n.textContent=(cur+1)+' / '+imgs.length;}
  function open(el){var group=el.dataset.group;
   imgs=group?allImgs.filter(function(x){return x.dataset.group===group;}):allImgs;
