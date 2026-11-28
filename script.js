@@ -479,7 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* v3 drop-downs (handoff 08 s5): the bar is a <button aria-expanded aria-controls>;
-   Enter and Space work natively. Closed by default; CSS animates the height. */
+   Enter and Space work natively. Evidence panels (research, results) start open in the markup; the rest start closed. CSS animates the height. */
 document.querySelectorAll('.v3-dd__bar').forEach(function (bar) {
   var dd = bar.closest('.v3-dd');
   bar.addEventListener('click', function () {

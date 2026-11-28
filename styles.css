@@ -2340,7 +2340,14 @@ body.home-page { background: var(--background); color: var(--foreground); }
   .home-name::after { left: 30%; top: 30px; width: 220px; height: 69px; }
   .home-tagline { font-size: 20px; line-height: 28px; }
   .home-bio { margin-top: 16px; }
-  .home-portrait { width: 70%; justify-self: center; }
+  /* Recruiters often open the link on a phone: keep the portrait as a small signature above the name
+     and the skills as one swipeable row, so "Selected work" starts about a screen sooner */
+  .home-intro__grid { gap: 16px; }
+  .home-portrait { order: -1; width: 112px; justify-self: start; }
+  .home-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px 4px; scroll-padding-inline: 16px; }
+  .home-chips::-webkit-scrollbar { display: none; }
+  .home-chip { flex: none; }
+  .home-skills { min-width: 0; } /* .home is a grid: without this the one-line chip row widens the whole page */
   .home-h2 { font-size: 26px; line-height: 32px; }
   .home-card__info { flex-direction: column; align-items: flex-start; gap: 16px; padding: 16px 20px 20px; }
   .home-card__side { justify-items: start; }
